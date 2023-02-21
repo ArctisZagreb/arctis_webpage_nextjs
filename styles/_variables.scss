@@ -1,28 +1,29 @@
 /* FONTS */
 $primary-font: "roboto";
-$secondary-font: "DM sans";
+$secondary-font: "Dosis";
 $dosis-font: "dosis";
 
 /* COLORS */
-$primary-color: #061f3d;
+$primary-color-500: #061f3d;
+$primary-color-300: #073772;
+$color-light-100: #fff;
 $orange-color: #ea7723;
 $purple-color: #93003a;
-$primary-color-light: #073772;
 $secondary-color: #fff;
 $primary-font-color-light: #666666;
 $accent-font-color: #488bf8;
 $accent-font-color-dark: #1d327d;
 $gradiant-darkblue: linear-gradient(
   270deg,
-  $primary-color 0%,
-  $primary-color-light 43.09%,
-  $primary-color 98.74%
+  $primary-color-500 0%,
+  $primary-color-300 43.09%,
+  $primary-color-500 98.74%
 );
 $gradiant-darkblue-transparent: linear-gradient(
   270deg,
-  $primary-color 0%,
+  $primary-color-500 0%,
   #073772b4 63.09%,
-  $primary-color 98.74%
+  $primary-color-500 98.74%
 );
 $gradiant-darkblue-header: linear-gradient(
   270deg,
@@ -31,10 +32,11 @@ $gradiant-darkblue-header: linear-gradient(
   #061f3d67 98.74%
 );
 /* BREAKPOINTS and WIDTHS */
-$breakpoint-mobile: 562px;
-$breakpoint-tablet: 900px;
+
+$container-max-width: 1300px;
+$breakpoint-tablet: 872px;
+$breakpoint-mobile: 560px;
 $breakpoint-small-desktop: 1100px;
-$max-container-width: 1300px;
 /* FONT SIZES */
 
 $font-weight-light: 300;
@@ -57,9 +59,6 @@ $line-height-h4: 2.2rem;
 $line-height-md: 2rem;
 $line-height-sm: 1.6rem;
 
-$container-max-width: 1200px;
-$breakpoint-tablet: 872px;
-$breakpoint-mobile: 560px;
 @mixin h1FontMedium {
   font-size: $font-size-h1;
   line-height: $line-height-h1;
@@ -179,6 +178,12 @@ $breakpoint-mobile: 560px;
   font-weight: $font-weight-bold;
   line-height: $line-height-md;
 }
+@mixin navFontRegular {
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  font-weight: $font-weight-light;
+}
+
 @mixin pagePaddingDesktop {
   padding-top: 18rem;
 }

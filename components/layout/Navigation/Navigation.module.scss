@@ -1,0 +1,36 @@
+@import "./../../../styles/variables";
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  padding: 1.5rem 0;
+  background: rgba($color-light-100, 0.1);
+  transition: 0.4s all;
+  &:hover {
+    background: $color-light-100;
+  }
+  &.scrolled {
+    background-color: $color-light-100;
+  }
+}
+.scrolled {
+  .logo-container {
+    img {
+      transition: 0.4s all;
+      height: 3rem;
+    }
+  }
+}
+.logo-container {
+  img {
+    transition: 0.4s all;
+    height: 5rem;
+    width: auto;
+  }
+}
+
+.navigation-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,7 @@
+@import "./../../../../styles/variables";
+
+.navigation-item {
+  font-family: "Noto Sans";
+  @include navFontRegular;
+  text-transform: uppercase;
+}
