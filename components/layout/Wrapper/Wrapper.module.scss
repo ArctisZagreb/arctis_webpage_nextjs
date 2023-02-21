@@ -1,0 +1,7 @@
+@import "./../../../styles/variables";
+
+.wrapper {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  position: relative;
+}
