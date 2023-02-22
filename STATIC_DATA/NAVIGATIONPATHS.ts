@@ -31,7 +31,7 @@ export const NAVIGATIONPATHS = [
     show: false,
     subroutes: [
       { name: "News", route: "/news" },
-      { name: "Success Stories", route: "/successstories" },
+      { name: "Success Stories", route: "/success-stories" },
       { name: "FAQ", route: "/faq" },
     ],
   },
