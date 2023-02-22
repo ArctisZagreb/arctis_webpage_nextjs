@@ -9,7 +9,7 @@ $primary-color-300: #073772;
 $color-light-100: #fff;
 $orange-color: #ea7723;
 $purple-color: #93003a;
-$secondary-color: #fff;
+$secondary-color-300: #ea7723;
 $primary-font-color-light: #666666;
 $accent-font-color: #488bf8;
 $accent-font-color-dark: #1d327d;
@@ -190,4 +190,8 @@ $line-height-sm: 1.6rem;
 
 @mixin PagePaddingMobile {
   padding: 12rem 2.4rem 1.3rem 2.4rem;
+}
+
+@mixin transitionAll {
+  transition: 0.4s all;
 }

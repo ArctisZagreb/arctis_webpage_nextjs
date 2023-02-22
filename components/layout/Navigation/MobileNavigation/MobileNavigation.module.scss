@@ -1,0 +1,26 @@
+@import "./../../../../styles/variables";
+
+.mobile-navigation {
+  display: none;
+}
+
+.hambi-container {
+  cursor: pointer;
+  svg {
+    height: 3.2rem;
+    width: 3.2rem;
+    fill: $primary-color-300;
+    @include transitionAll;
+  }
+  &:hover {
+    svg {
+      fill: $secondary-color-300;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .mobile-navigation {
+    display: block;
+  }
+}

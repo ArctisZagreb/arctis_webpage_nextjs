@@ -5,8 +5,10 @@ import styles from "./NavigationItem.module.scss";
 export const NavigationItem: React.FC<{ item: INavItem }> = ({ item }) => {
   const { name, route, show, subroutes } = item;
   return (
-    <Link href={route} className={styles["navigation-item_link"]}>
-      <li className={styles["navigation-item"]}>{name}</li>
+    <div className={styles["navigation-item_link"]}>
+      <Link href={route}>
+        <li className={styles["navigation-item"]}>{name}</li>
+      </Link>
       {subroutes && (
         <ul className={styles["subroutes-container"]}>
           {subroutes.map((subItem) => {
@@ -18,6 +20,6 @@ export const NavigationItem: React.FC<{ item: INavItem }> = ({ item }) => {
           })}
         </ul>
       )}
-    </Link>
+    </div>
   );
 };

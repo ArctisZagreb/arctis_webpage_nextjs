@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
 import { Wrapper } from "../Wrapper/Wrapper";
 import { DesktopNavigation } from "./DesktopNavigation/DesktopNavigation";
+import { MobileNavigation } from "./MobileNavigation/MobileNavigation";
 import styles from "./Navigation.module.scss";
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -38,6 +39,7 @@ export const Navigation = () => {
             </Link>
           </div>
           <DesktopNavigation />
+          <MobileNavigation />
         </div>
       </Wrapper>
     </div>
