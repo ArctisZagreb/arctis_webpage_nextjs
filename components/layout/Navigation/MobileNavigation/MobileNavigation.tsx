@@ -8,7 +8,8 @@ export const MobileNavigation = () => {
   const closeModalHandler = () => setOpenModal(false);
   return (
     <div className={styles["mobile-navigation"]}>
-      {openModal && <MobileNavigationModal closeModal={closeModalHandler} />}
+      <MobileNavigationModal open={openModal} closeModal={closeModalHandler} />
+
       {!openModal && (
         <div className={styles["hambi-container"]} onClick={openModalHandler}>
           <HamburgerIcon />

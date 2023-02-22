@@ -5,8 +5,16 @@
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 0;
   background-color: $primary-color-500;
+  transform: scale(0);
+  transition: 1s all;
+  z-index: 100;
+  &.open {
+    transform: scale(1);
+    height: 100vh;
+    transition: 1s all;
+  }
 }
 
 .close-icon {

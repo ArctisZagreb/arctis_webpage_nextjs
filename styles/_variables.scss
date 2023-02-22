@@ -183,7 +183,11 @@ $line-height-sm: 1.6rem;
   line-height: $line-height-md;
   font-weight: $font-weight-light;
 }
-
+@mixin navFontBig {
+  font-size: $font-size-h3;
+  line-height: $line-height-md;
+  font-weight: $font-weight-light;
+}
 @mixin pagePaddingDesktop {
   padding-top: 18rem;
 }
