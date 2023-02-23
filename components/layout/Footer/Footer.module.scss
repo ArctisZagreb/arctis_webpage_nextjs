@@ -1,0 +1,93 @@
+@import "./../../../styles/variables";
+
+.footer {
+  display: flex;
+  gap: 4rem;
+  padding: 2rem 0;
+}
+.arctis-section,
+.contact-section,
+.links-section {
+  flex: 1;
+}
+.section-title {
+  @include h4FontRegular;
+  padding: 4rem 0 2rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 0.1rem;
+    background: $primary-color-300;
+    opacity: 0.4;
+  }
+}
+.arctis-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .logo-container {
+    margin: 1rem 0;
+  }
+  p {
+    @include bodyFontSmRegular;
+  }
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    .social-icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      cursor: pointer;
+      path {
+        @include transitionAll;
+      }
+
+      &:hover {
+        svg,
+        path {
+          fill: $secondary-color-300;
+        }
+      }
+
+      svg,
+      path {
+        fill: $primary-color-300;
+      }
+    }
+  }
+}
+
+.contact-section {
+  .contact-box {
+    display: flex;
+    align-items: center;
+    @include bodyFontSmRegular;
+    margin-bottom: 1rem;
+    a {
+      @include transitionAll;
+      &:hover {
+        color: $secondary-color-300;
+      }
+    }
+  }
+  .icon-container {
+    margin-right: 1rem;
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $secondary-color-300;
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  .footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

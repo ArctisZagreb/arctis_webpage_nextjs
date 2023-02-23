@@ -12,6 +12,7 @@
   &.scrolled {
     background-color: $color-light-100;
   }
+  z-index: 60;
 }
 .scrolled {
   .logo-container {
