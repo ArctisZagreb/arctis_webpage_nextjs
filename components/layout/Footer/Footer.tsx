@@ -6,6 +6,8 @@ import { Wrapper } from "../Wrapper/Wrapper";
 import { SocialIcons } from "@/components/UI/icons/SocialIcons";
 import { ContactIcons } from "@/components/UI/icons/ContactIcons";
 import { CONTACTDATA } from "@/STATIC_DATA/ARCTISCONTACTDATA";
+import { NAVIGATIONPATHS } from "@/STATIC_DATA/NAVIGATIONPATHS";
+import Link from "next/link";
 export const Footer = () => {
   return (
     <Wrapper>
@@ -13,10 +15,10 @@ export const Footer = () => {
         <div className={styles["arctis-section"]}>
           <div className={styles["logo-container"]}>
             <Image
-              width={180}
-              height={70}
+              width={240}
+              height={90}
               alt="Arctis logo"
-              src="/assets/logo/arctis-logo-blue.png"
+              src="/assets/logo/arctis-logo2.png"
             />
           </div>
           <p>
@@ -43,31 +45,50 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        <div className={styles["contact-section"]}>
-          <h2 className={styles["section-title"]}>Contact Us</h2>
-          <div className={styles["contact-box"]}>
-            <span className={styles["icon-container"]}>
-              <ContactIcons type="address" />
-            </span>
-            <address>{CONTACTDATA.address}</address>
+        <div className={styles["flex-group"]}>
+          <div className={styles["contact-section"]}>
+            <h2 className={styles["section-title"]}>Contact Us</h2>
+            <div className={styles["contact-box"]}>
+              <span className={styles["icon-container"]}>
+                <ContactIcons type="address" />
+              </span>
+              <address>{CONTACTDATA.address}</address>
+            </div>
+            <div className={styles["contact-box"]}>
+              <span className={styles["icon-container"]}>
+                <ContactIcons type="email" />
+              </span>
+              <a href={`emailto:${CONTACTDATA.email}`}>{CONTACTDATA.email}</a>
+            </div>
+            <div className={styles["contact-box"]}>
+              <span className={styles["icon-container"]}>
+                <ContactIcons type="phone" />
+              </span>
+              <a href={`tel:${CONTACTDATA.phoneNumber}`}>
+                {CONTACTDATA.phoneNumber}
+              </a>
+            </div>
           </div>
-          <div className={styles["contact-box"]}>
-            <span className={styles["icon-container"]}>
-              <ContactIcons type="email" />
-            </span>
-            <a href={`emailto:${CONTACTDATA.email}`}>{CONTACTDATA.email}</a>
+          <div className={styles["links-section"]}>
+            <h2 className={styles["section-title"]}>Quick Links</h2>
+            <ul className={styles["links-list"]}>
+              <li>
+                <Link href="/">Services</Link>
+              </li>
+              <li>
+                <Link href="/">Solutions</Link>
+              </li>
+              <li>
+                <Link href="/">Resources</Link>
+              </li>
+              <li>
+                <Link href="/">About us</Link>
+              </li>
+              <li>
+                <Link href="/">FAQ</Link>
+              </li>
+            </ul>
           </div>
-          <div className={styles["contact-box"]}>
-            <span className={styles["icon-container"]}>
-              <ContactIcons type="phone" />
-            </span>
-            <a href={`tel:${CONTACTDATA.phoneNumber}`}>
-              {CONTACTDATA.phoneNumber}
-            </a>
-          </div>
-        </div>
-        <div className={styles["links-section"]}>
-          <h2 className={styles["section-title"]}>Quick Links</h2>
         </div>
       </footer>
     </Wrapper>
