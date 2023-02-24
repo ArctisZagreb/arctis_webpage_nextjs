@@ -1,0 +1,40 @@
+@import "./../../styles/variables";
+
+.button {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border: none;
+  background-color: $secondary-color-300;
+  box-shadow: 0.1rem 0.3rem 1rem rgba($primary-color-300, 0.2);
+  color: $primary-font-color;
+  text-transform: uppercase;
+  transition: 0.5s all;
+  span {
+    position: relative;
+    z-index: 20;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 0;
+    height: 100%;
+    transition: 0.5s all;
+    background-color: $primary-color-300;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+
+      transition: 0.5s all;
+    }
+  }
+  &:active {
+    transform: scale(0.94);
+  }
+}

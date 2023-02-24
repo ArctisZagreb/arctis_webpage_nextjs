@@ -1,0 +1,51 @@
+@import "./../../styles/variables";
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  p {
+    @include h3FontRegular;
+  }
+}
+.services-cards {
+  display: flex;
+  margin: 4rem 0 1rem 0;
+  .service-card {
+    padding: 4rem 0;
+    flex: 1;
+    text-align: center;
+    h4 {
+      @include h3FontMedium;
+      margin-bottom: 5rem;
+      color: $accent-font-color-700;
+    }
+    &:nth-child(2) {
+      border-right: 0.1rem solid rgba($color-gray, 0.5);
+      border-left: 0.1rem solid rgba($color-gray, 0.5);
+    }
+  }
+}
+.down-arrow-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  .main-content {
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 5rem;
+  }
+  .services-cards {
+    flex-direction: column;
+    .service-card {
+      &:nth-child(2) {
+        border-right: none;
+        border-left: none;
+        border-top: 0.1rem solid rgba($color-gray, 0.5);
+        border-bottom: 0.1rem solid rgba($color-gray, 0.5);
+      }
+    }
+  }
+}

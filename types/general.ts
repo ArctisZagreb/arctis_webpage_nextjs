@@ -1,3 +1,5 @@
+export type TSocialIcons = "facebook" | "linkedin";
+export type TContactIcons = "address" | "phone" | "email";
 type subroute = {
   name: string;
   route: string;

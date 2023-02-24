@@ -7,12 +7,15 @@ $dosis-font: "dosis";
 $primary-color-500: #061f3d;
 $primary-color-300: #073772;
 $color-light-100: #fff;
+$color-gray: #666;
 $orange-color: #ea7723;
 $purple-color: #93003a;
-$secondary-color: #fff;
-$primary-font-color-light: #666666;
-$accent-font-color: #488bf8;
-$accent-font-color-dark: #1d327d;
+$secondary-color-300: #ea7723;
+$primary-font-color: #fff;
+$primary-font-color-dark: #666666;
+$accent-font-color-300: #488bf8;
+$accent-font-color-500: #1d327d;
+$accent-font-color-700: #061f3d;
 $gradiant-darkblue: linear-gradient(
   270deg,
   $primary-color-500 0%,
@@ -55,8 +58,8 @@ $font-size-xs: 1.2rem;
 $line-height-h1: 5.6rem;
 $line-height-h2: 4.4rem;
 $line-height-h3: 3rem;
-$line-height-h4: 2.2rem;
-$line-height-md: 2rem;
+$line-height-h4: 2.4rem;
+$line-height-md: 2.2rem;
 $line-height-sm: 1.6rem;
 
 @mixin h1FontMedium {
@@ -183,11 +186,19 @@ $line-height-sm: 1.6rem;
   line-height: $line-height-md;
   font-weight: $font-weight-light;
 }
-
+@mixin navFontBig {
+  font-size: $font-size-h3;
+  line-height: $line-height-md;
+  font-weight: $font-weight-light;
+}
 @mixin pagePaddingDesktop {
   padding-top: 18rem;
 }
 
 @mixin PagePaddingMobile {
   padding: 12rem 2.4rem 1.3rem 2.4rem;
+}
+
+@mixin transitionAll {
+  transition: 0.4s all;
 }

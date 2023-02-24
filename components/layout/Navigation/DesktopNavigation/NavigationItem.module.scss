@@ -1,7 +1,47 @@
 @import "./../../../../styles/variables";
-
+.navigation-item_link {
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  &:hover {
+    .subroutes-container {
+      transform: scaleY(1);
+      background: $color-light-100;
+    }
+  }
+}
 .navigation-item {
   font-family: "Noto Sans";
   @include navFontRegular;
   text-transform: uppercase;
+  transition: 0.4s all;
+  &:hover {
+    color: $accent-font-color-300;
+  }
+  position: relative;
+}
+
+.subroutes-container {
+  transition: 0.4s all;
+  transform: scaleY(0);
+  position: absolute;
+  top: 2.3rem;
+  left: 0;
+  padding-top: 2.5rem;
+  transform-origin: 10% 14%;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  height: auto;
+  min-width: 20rem;
+  background: rgba($color-light-100, 0.1);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  li {
+    @include navFontRegular;
+    padding: 1rem;
+    &:hover {
+      color: $accent-font-color-300;
+    }
+  }
 }

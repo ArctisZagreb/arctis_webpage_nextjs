@@ -1,0 +1,134 @@
+@import "./../../../styles/variables";
+
+.footer {
+  display: flex;
+  gap: 4rem;
+  padding: 3rem 0 4rem 0;
+}
+.arctis-section {
+  flex: 1;
+  max-width: 40rem;
+}
+.flex-group {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.contact-section,
+.links-section {
+  padding: 0 3rem;
+  width: auto;
+}
+.section-title {
+  @include h4FontRegular;
+  padding: 4rem 0 2rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 0.1rem;
+    background: $primary-color-300;
+    opacity: 0.4;
+  }
+}
+.arctis-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .logo-container {
+    margin: 1rem 0;
+  }
+  p {
+    @include bodyFontSmRegular;
+  }
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    .social-icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      cursor: pointer;
+      path {
+        @include transitionAll;
+      }
+
+      &:hover {
+        svg,
+        path {
+          fill: $secondary-color-300;
+        }
+      }
+
+      svg,
+      path {
+        fill: $primary-color-300;
+      }
+    }
+  }
+}
+
+.contact-section {
+  .contact-box {
+    display: flex;
+    align-items: center;
+    @include bodyFontSmRegular;
+    margin-bottom: 1rem;
+    a {
+      @include transitionAll;
+      &:hover {
+        color: $secondary-color-300;
+      }
+    }
+  }
+  .icon-container {
+    margin-right: 1rem;
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $secondary-color-300;
+    }
+  }
+}
+.links-section {
+  li {
+    @include bodyFontSmRegular;
+    margin-bottom: 0.5rem;
+    color: $primary-color-300;
+    &:hover {
+      @include transitionAll;
+      color: $secondary-color-300;
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  .footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .flex-group {
+    flex-direction: column;
+  }
+  .arctis-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    p {
+      display: inline-block;
+      padding: 0 3rem;
+      text-align: center;
+    }
+    .logo-container {
+      max-width: 24rem;
+      img {
+        width: 100%;
+        height: 9rem;
+      }
+    }
+  }
+}

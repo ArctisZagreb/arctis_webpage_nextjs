@@ -1,0 +1,36 @@
+@import "./../../../../styles/variables";
+
+.navigation-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 0;
+  background-color: $primary-color-500;
+  transform: scale(0);
+  transition: 1s all;
+  z-index: 100;
+  &.open {
+    transform: scale(1);
+    height: 100vh;
+    transition: 1s all;
+  }
+}
+
+.close-icon {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  cursor: pointer;
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: $color-light-100;
+    @include transitionAll;
+  }
+  &:hover {
+    svg {
+      fill: $secondary-color-300;
+    }
+  }
+}

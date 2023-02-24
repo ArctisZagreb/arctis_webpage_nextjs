@@ -1,1 +1,6 @@
 @import "./../../../../styles/variables";
+@media screen and (max-width: $breakpoint-tablet) {
+  .desktop-navigation {
+    display: none;
+  }
+}
