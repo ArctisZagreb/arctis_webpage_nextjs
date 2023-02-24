@@ -8,7 +8,13 @@ export const MNavigationList: React.FC<{ closeModal: Function }> = ({
   return (
     <ul className={styles["navigation-list"]}>
       {NAVIGATIONPATHS.map((navItem) => {
-        return <MNavigationItem item={navItem} closeModal={closeModal} />;
+        return (
+          <MNavigationItem
+            key={navItem.name}
+            item={navItem}
+            closeModal={closeModal}
+          />
+        );
       })}
     </ul>
   );
