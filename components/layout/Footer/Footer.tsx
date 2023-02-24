@@ -29,7 +29,7 @@ export const Footer = () => {
           <div className={styles["social-icons"]}>
             <a
               href={CONTACTDATA.linkedin}
-              rel="noref"
+              rel="noreferrer"
               target="_blank"
               className={styles["social-icon"]}
             >
@@ -37,7 +37,7 @@ export const Footer = () => {
             </a>
             <a
               href={CONTACTDATA.facebook}
-              rel="noref"
+              rel="noreferrer"
               target="_blank"
               className={styles["social-icon"]}
             >
