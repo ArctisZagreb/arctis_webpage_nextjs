@@ -47,12 +47,12 @@ export const HeroSection = () => {
               real estate, infrastructure, building, asset, and project data.
             </p>
           </div>
-          <div
-            className={styles["down-arrow-container"]}
-            onClick={nextSectionHandler}
-          >
-            <DownArrow theme="light" />
-          </div>
+        </div>
+        <div
+          className={styles["down-arrow-container"]}
+          onClick={nextSectionHandler}
+        >
+          <DownArrow theme="light" />
         </div>
       </Wrapper>
     </div>

@@ -43,7 +43,6 @@
   }
 }
 .hero-content {
-  height: 40vh;
   padding: 6rem 0;
   display: flex;
   gap: 10rem;
@@ -58,10 +57,10 @@
 }
 
 .down-arrow-container {
-  position: absolute;
-  bottom: 7rem;
-  left: calc(50% - 4rem);
-  cursor: pointer;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
 }
 @media screen and (max-width: $breakpoint-tablet) {
   .hero-content {
@@ -95,8 +94,5 @@
   }
   .hero-text {
     @include bodyFontRegular;
-  }
-  .down-arrow-container {
-    display: none;
   }
 }
