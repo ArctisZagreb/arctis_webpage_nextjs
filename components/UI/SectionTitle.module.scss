@@ -1,0 +1,15 @@
+@import "./../../styles/variables";
+.section-title {
+  position: relative;
+  .anchor {
+    position: absolute;
+    top: -8rem;
+  }
+  h1 {
+    font-size: 9rem;
+    letter-spacing: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba($primary-font-color-dark, 0.2);
+  }
+}

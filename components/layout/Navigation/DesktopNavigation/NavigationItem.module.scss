@@ -17,7 +17,7 @@
   text-transform: uppercase;
   transition: 0.4s all;
   &:hover {
-    color: $accent-font-color;
+    color: $accent-font-color-300;
   }
   position: relative;
 }
@@ -41,7 +41,7 @@
     @include navFontRegular;
     padding: 1rem;
     &:hover {
-      color: $accent-font-color;
+      color: $accent-font-color-300;
     }
   }
 }
