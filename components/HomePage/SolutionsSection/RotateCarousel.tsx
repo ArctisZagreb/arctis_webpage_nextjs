@@ -13,7 +13,7 @@ export const RotateCarousel = () => {
       <div className={styles["inner-carousel"]}>
         {LOGOS.map((logo, i) => {
           return (
-            <div className={styles["carusel-item"]}>
+            <div className={styles["carusel-item"]} key={logo}>
               <Image alt="bla bla" src={logo} width={100} height={100} />
             </div>
           );
