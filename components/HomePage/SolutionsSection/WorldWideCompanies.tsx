@@ -1,5 +1,6 @@
 import React from "react";
 import { CompaniesCarousel } from "./CompaniesCarousel";
+import { RotateCarousel } from "./RotateCarousel";
 import styles from "./WorldWideCompanies.module.scss";
 export const WorldWideCompanies = () => {
   return (
