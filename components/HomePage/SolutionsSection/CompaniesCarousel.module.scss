@@ -1,0 +1,35 @@
+@import "./../../../styles/variables";
+.carousel {
+  color: $primary-font-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+}
+.inner-carousel {
+  width: auto;
+  height: 13rem;
+  overflow: hidden;
+  display: flex;
+  gap: 2rem;
+  border-radius: 5rem;
+}
+.carousel-img-box {
+  background: white;
+  width: 10rem;
+  height: 10rem;
+  transition: 0.4s all;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    padding: 1rem;
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+  } /* 
+  &.move {
+    transform: translateX(0);
+  } */
+}
