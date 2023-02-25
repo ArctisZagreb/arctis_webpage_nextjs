@@ -1,0 +1,12 @@
+@import "./../../../styles/variables";
+.worldwide-companies {
+  .main-text {
+    max-width: 90rem;
+    margin: 0 auto;
+    h2 {
+      text-align: center;
+      @include h2FontRegular;
+      color: $primary-font-color;
+    }
+  }
+}

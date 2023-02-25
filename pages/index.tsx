@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/HomePage/HeroSection";
 import { ServicesSection } from "@/components/HomePage/ServicesSection";
+import { SolutionsSection } from "@/components/HomePage/SolutionsSection/SolutionsSection";
 import Head from "next/head";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <ServicesSection />
+        <SolutionsSection />
       </main>
     </>
   );
