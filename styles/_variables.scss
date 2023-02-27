@@ -40,6 +40,8 @@ $container-max-width: 1300px;
 $breakpoint-tablet: 872px;
 $breakpoint-mobile: 560px;
 $breakpoint-small-desktop: 1100px;
+
+$sectionMargins: 5rem 0;
 /* FONT SIZES */
 
 $font-weight-light: 300;
@@ -201,4 +203,12 @@ $line-height-sm: 1.6rem;
 
 @mixin transitionAll {
   transition: 0.4s all;
+}
+
+@mixin sectionTitle {
+  @include h2FontMedium();
+  text-align: center;
+  color: $color-light-100;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
 }
