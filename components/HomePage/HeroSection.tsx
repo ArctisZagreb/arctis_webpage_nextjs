@@ -14,7 +14,7 @@ export const HeroSection = () => {
     router.push("/#services");
   };
   return (
-    <div className={styles["hero-section"]}>
+    <section className={styles["hero-section"]}>
       <div
         className={styles["video-container"]}
         onMouseOver={() => {
@@ -55,6 +55,6 @@ export const HeroSection = () => {
           <DownArrow theme="light" />
         </div>
       </Wrapper>
-    </div>
+    </section>
   );
 };
