@@ -14,41 +14,43 @@ export const ServicesSection = () => {
     router.push("/#solutions");
   };
   return (
-    <Wrapper>
-      <SectionTitle anchorId="services" title="SERVICES" />
-      <div className={styles["main-content"]}>
-        <p>
-          We are experts in IWMS / CAFM / CMMS solutions and technology
-          services, focused on enhancing your working environment and supporting
-          your organisation goals
-        </p>
-        <Image
-          src="/assets/images/homepage/service-section.png"
-          alt="decorative image"
-          width={550}
-          height={380}
-        />
-      </div>
-      <div className={styles["services-cards"]}>
-        <div className={styles["service-card"]}>
-          <h4>Project Management</h4>
-          <Button text="read more" />
+    <section>
+      <Wrapper>
+        <SectionTitle anchorId="services" title="SERVICES" />
+        <div className={styles["main-content"]}>
+          <p>
+            We are experts in IWMS / CAFM / CMMS solutions and technology
+            services, focused on enhancing your working environment and
+            supporting your organisation goals
+          </p>
+          <Image
+            src="/assets/images/homepage/service-section.png"
+            alt="decorative image"
+            width={550}
+            height={380}
+          />
         </div>
-        <div className={styles["service-card"]}>
-          <h4>Implementation</h4>
-          <Button text="read more" />
+        <div className={styles["services-cards"]}>
+          <div className={styles["service-card"]}>
+            <h4>Project Management</h4>
+            <Button text="read more" />
+          </div>
+          <div className={styles["service-card"]}>
+            <h4>Implementation</h4>
+            <Button text="read more" />
+          </div>
+          <div className={styles["service-card"]}>
+            <h4>Consulting</h4>
+            <Button text="read more" />
+          </div>
         </div>
-        <div className={styles["service-card"]}>
-          <h4>Consulting</h4>
-          <Button text="read more" />
+        <div
+          className={styles["down-arrow-container"]}
+          onClick={nextSectionHandler}
+        >
+          <DownArrow />
         </div>
-      </div>
-      <div
-        className={styles["down-arrow-container"]}
-        onClick={nextSectionHandler}
-      >
-        <DownArrow />
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </section>
   );
 };
