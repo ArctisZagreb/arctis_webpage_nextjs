@@ -10,3 +10,14 @@ export interface INavItem {
   show: boolean;
   subroutes: null | subroute[];
 }
+
+export interface IArchibusPlan {
+  _id: number;
+  name: string;
+  cardMainText: string;
+  cardContentList: string[];
+  cardDetails: {
+    title: string;
+    text: string[];
+  }[];
+}
