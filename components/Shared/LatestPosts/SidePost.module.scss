@@ -1,0 +1,23 @@
+@import "./../../../styles/variables";
+.side-post {
+  flex: 1;
+  border-bottom: 0.15rem solid $color-gray;
+  border-top: 0.15rem solid $color-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include transitionAll;
+  cursor: pointer;
+  &:hover {
+    border-color: $secondary-color-300;
+  }
+}
+.title {
+  text-align: center;
+  @include bodyFontRegular;
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  .side-post {
+    padding: 1.5rem 0;
+  }
+}

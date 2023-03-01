@@ -18,14 +18,35 @@ export interface IAuthor {
   image: string;
   _id: string;
 }
+type externalNews = {
+  flag: boolean;
+  link: string;
+};
 export interface IPost {
   _id: string;
   title: string;
+  externalNews: externalNews;
   slug: ISlug;
   author: IAuthor;
-  mainImage: string;
+  image: string;
+  externalImg: string;
   categories: ICategory[];
   publishedAt: string;
   description: string;
   body: any;
+  _type: "post";
+}
+export interface ISuccessStory {
+  _id: string;
+  title: string;
+  externalNews: externalNews;
+  externalImg: string;
+  slug: ISlug;
+  author: IAuthor;
+  image: string;
+  categories: ICategory[];
+  publishedAt: string;
+  description: string;
+  body: any;
+  _type: "successStories";
 }
