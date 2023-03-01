@@ -1,4 +1,6 @@
+import { AboutUsSection } from "@/components/HomePage/AboutUsSection/AboutUsSection";
 import { HeroSection } from "@/components/HomePage/HeroSection";
+import { ResourcesSection } from "@/components/HomePage/ResourcesSection/ResourcesSection";
 import { ServicesSection } from "@/components/HomePage/ServicesSection";
 import { SolutionsSection } from "@/components/HomePage/SolutionsSection/SolutionsSection";
 import Head from "next/head";
@@ -19,6 +21,8 @@ export default function Home() {
         <HeroSection />
         <ServicesSection />
         <SolutionsSection />
+        <ResourcesSection />
+        <AboutUsSection />
       </main>
     </>
   );

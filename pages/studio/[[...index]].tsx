@@ -10,7 +10,7 @@ export default function StudioPage() {
       <Head>
         <NextStudioHead />
       </Head>
-      <div>
+      <div className="sanity-studio">
         <NextStudio config={config} />
       </div>
     </>
