@@ -1,0 +1,8 @@
+@import "./../../../styles/variables";
+.about-us {
+  background: $gradiant-darkblue;
+  min-height: 50vh;
+}
+.up-arrow-container {
+  transform: rotate(180deg);
+}

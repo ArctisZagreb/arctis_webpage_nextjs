@@ -12,7 +12,7 @@ export const SolutionsSection = () => {
   const router = useRouter();
 
   const nextSectionHandler = () => {
-    router.push("/#services");
+    router.push("/#resources");
   };
   return (
     <section className={styles["solutions-section"]}>
@@ -22,13 +22,13 @@ export const SolutionsSection = () => {
         <ArchibusPlans />
         <ArchibusProducts />
         <Roi />
-        <div
-          className={styles["down-arrow-container"]}
-          onClick={nextSectionHandler}
-        >
-          <DownArrow theme="light" />
-        </div>
       </Wrapper>
+      <div
+        className={styles["down-arrow-container"]}
+        onClick={nextSectionHandler}
+      >
+        <DownArrow theme="light" />
+      </div>
     </section>
   );
 };
