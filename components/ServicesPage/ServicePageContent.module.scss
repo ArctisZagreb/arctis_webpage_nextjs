@@ -1,0 +1,41 @@
+@import "./../../styles/variables";
+
+.content {
+  padding: 3rem 0;
+  margin: 0 auto;
+  background: $gradiant-darkblue;
+  color: $primary-font-color;
+  .title {
+    @include h2FontRegular;
+    margin: 4rem 0 2rem 0;
+  }
+  .paragraph {
+    @include bodyFontRegular;
+    margin-bottom: 2rem;
+  }
+  .list {
+    padding-left: 2rem;
+    list-style: circle;
+    li {
+      @include bodyFontRegular;
+      margin-bottom: 1rem;
+    }
+  }
+  .parallax-container {
+    margin: 2rem 0;
+  }
+}
+.parallax-image {
+  height: 10rem;
+  position: relative;
+  .image {
+    background: transparent;
+    background-image: url("/assets/images/decorative/paragraph2.jpg");
+    min-height: 110px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
