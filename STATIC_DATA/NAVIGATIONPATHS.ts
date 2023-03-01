@@ -7,7 +7,7 @@ export const NAVIGATIONPATHS = [
   },
   {
     name: "services",
-    route: "/services",
+    route: "/#services",
     show: false,
     subroutes: [
       { name: "Project Management", route: "/projectmanagement" },
@@ -17,7 +17,7 @@ export const NAVIGATIONPATHS = [
   },
   {
     name: "solutions",
-    route: "/solutions",
+    route: "/#solutions",
     show: false,
     subroutes: [
       { name: "ARCHIBUS Products", route: "/archibus" },
@@ -27,7 +27,7 @@ export const NAVIGATIONPATHS = [
   },
   {
     name: "resources",
-    route: "/resources",
+    route: "/#resources",
     show: false,
     subroutes: [
       { name: "News", route: "/news" },
