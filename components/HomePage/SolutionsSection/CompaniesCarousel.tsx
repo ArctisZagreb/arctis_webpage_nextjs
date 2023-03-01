@@ -12,7 +12,7 @@ const LOGOS = [
 export const CompaniesCarousel = () => {
   const [nextIcon, setNextIcon] = useState(true);
   const moveNextHandler = () => setNextIcon(true);
-  console.log(nextIcon);
+
   return (
     <div className={styles["carousel"]}>
       {/* <button

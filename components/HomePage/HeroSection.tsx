@@ -24,8 +24,8 @@ export const HeroSection = () => {
           setShowControls(false);
         }}
       >
-        <video autoPlay={false} controls={showControls} loop muted>
-          <source src="/assets/video/why-ab.mp4" type="video/mp4" />
+        <video autoPlay={true} controls={showControls} loop muted>
+          <source src="/assets/video/workplace-strategy.mp4" type="video/mp4" />
         </video>
       </div>
       <Wrapper>
