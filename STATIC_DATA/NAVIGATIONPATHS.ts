@@ -10,7 +10,7 @@ export const NAVIGATIONPATHS = [
     route: "/#services",
     show: false,
     subroutes: [
-      { name: "Project Management", route: "/projectmanagement" },
+      { name: "Project Management", route: "/project-management" },
       { name: "Implementation", route: "/implementation" },
       { name: "Consulting", route: "/consulting" },
     ],

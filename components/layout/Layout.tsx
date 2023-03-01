@@ -14,6 +14,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
     <div className={styles["layout"]}>
       <Navigation />
       {children}
+
       <Footer />
     </div>
   );

@@ -1,7 +1,18 @@
+import { Wrapper } from "@/components/layout/Wrapper/Wrapper";
+import { PageBigTitle } from "@/components/Shared/PageBigTitle";
 import React from "react";
 
-const IMPORT_NAMEPage = () => {
-  return <div>IMPORT_NAMEPage</div>;
+const ProjectManagementPage = () => {
+  return (
+    <div>
+      <PageBigTitle
+        img="/assets/images/decorative/bg-header.jpg"
+        title="project management"
+        quote=" No one can whistle a symphony. It takes an orchestra to play it. "
+        quoteAuthor="Halford E. Luccock"
+      />
+    </div>
+  );
 };
 
-export default IMPORT_NAMEPage;
+export default ProjectManagementPage;
