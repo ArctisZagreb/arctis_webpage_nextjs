@@ -12,3 +12,25 @@
   display: flex;
   justify-content: center;
 }
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 65rem;
+  margin: 8rem auto 5rem auto;
+  @include bodyFontRegular;
+
+  .contact {
+    text-align: right;
+  }
+  a {
+    text-transform: uppercase;
+    @include bodyFontMedium;
+    border-top: 0.1rem solid $primary-color-300;
+    border-bottom: 0.1rem solid $primary-color-300;
+    @include transitionAll;
+    &:hover {
+      border-color: $secondary-color-300;
+    }
+  }
+}

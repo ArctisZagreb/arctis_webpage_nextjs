@@ -3,6 +3,7 @@ import { LatestPosts } from "@/components/Shared/LatestPosts/LatestPosts";
 import { DownArrow } from "@/components/UI/DownArrow/DownArrow";
 import { SectionTitle } from "@/components/UI/SectionTitle";
 import { IPost, ISuccessStory } from "@/types/sanity-types";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import styles from "./ResourcesSection.module.scss";
@@ -26,6 +27,19 @@ export const ResourcesSection: React.FC<{
           {successStories && (
             <LatestPosts title="success stories" data={successStories} />
           )}
+        </div>
+        <div className={styles["additional-info"]}>
+          <div className={styles["faq"]}>
+            <p>
+              For answers on some common question{" "}
+              <Link href="/faq">visit faq</Link>
+            </p>
+          </div>
+          <div className={styles["contact"]}>
+            <p>
+              Or <Link href="/faq">contact us</Link> with specific question.
+            </p>
+          </div>
         </div>
         <div
           className={styles["down-arrow-container"]}
