@@ -1,0 +1,35 @@
+@import "./../../../styles/variables";
+
+.latest-posts {
+  margin: 0 auto;
+}
+.title {
+  @include h3FontRegular;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4rem;
+}
+.posts-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15%;
+}
+.showcase-post {
+  width: 40%;
+}
+
+.side-posts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  .posts-container {
+    flex-direction: column;
+  }
+  .showcase-post {
+    width: 100%;
+  }
+}

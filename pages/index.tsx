@@ -3,9 +3,16 @@ import { HeroSection } from "@/components/HomePage/HeroSection";
 import { ResourcesSection } from "@/components/HomePage/ResourcesSection/ResourcesSection";
 import { ServicesSection } from "@/components/HomePage/ServicesSection";
 import { SolutionsSection } from "@/components/HomePage/SolutionsSection/SolutionsSection";
+import { getLatestPosts, getLatestSuccessStories } from "@/lib/sanityFetch";
+import { IPost, ISuccessStory } from "@/types/sanity-types";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 
-export default function Home() {
+const HomePage: React.FC<{
+  latestNews: IPost[];
+  latestSS: ISuccessStory[];
+}> = ({ latestNews, latestSS }) => {
+  console.log(latestNews, latestSS);
   return (
     <>
       <Head>
@@ -21,9 +28,20 @@ export default function Home() {
         <HeroSection />
         <ServicesSection />
         <SolutionsSection />
-        <ResourcesSection />
+        <ResourcesSection successStories={latestSS} news={latestNews} />
         <AboutUsSection />
       </main>
     </>
   );
-}
+};
+export default HomePage;
+export const getStaticProps: GetStaticProps = async () => {
+  const latestNews = await getLatestPosts(4);
+  const latestSS = await getLatestSuccessStories(4);
+  return {
+    props: {
+      latestNews,
+      latestSS,
+    },
+  };
+};

@@ -46,3 +46,18 @@ export const getPostsPaths = async () => {
   });
   return pathsList;
 };
+
+/* Success Stories */
+
+export const getLatestSuccessStories = async (numberOfLatest: number) => {
+  const groq = `
+    *[_type=='successStories' && (!(_id in path("drafts.**")))]{
+      ...,
+      categories[]->
+   } \| order(_createdAt desc)[0..${numberOfLatest}]
+  `;
+
+  const data = await client.fetch(groq);
+
+  return data;
+};

@@ -12,4 +12,19 @@
     text-transform: uppercase;
     color: rgba($primary-font-color-dark, 0.2);
   }
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  .section-title {
+    h1 {
+      font-size: 6rem;
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-mobile) {
+  .section-title {
+    h1 {
+      font-size: 4rem;
+    }
+  }
 }
