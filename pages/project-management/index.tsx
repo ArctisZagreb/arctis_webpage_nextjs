@@ -1,4 +1,5 @@
 import { Wrapper } from "@/components/layout/Wrapper/Wrapper";
+import { ProjectManagementContent } from "@/components/ServicesPage/ProjectManagementContent";
 import { PageBigTitle } from "@/components/Shared/PageBigTitle";
 import React from "react";
 
@@ -11,6 +12,7 @@ const ProjectManagementPage = () => {
         quote=" No one can whistle a symphony. It takes an orchestra to play it. "
         quoteAuthor="Halford E. Luccock"
       />
+      <ProjectManagementContent />
     </div>
   );
 };
