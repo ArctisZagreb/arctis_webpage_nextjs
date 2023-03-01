@@ -12,7 +12,6 @@ const HomePage: React.FC<{
   latestNews: IPost[];
   latestSS: ISuccessStory[];
 }> = ({ latestNews, latestSS }) => {
-  console.log(latestNews, latestSS);
   return (
     <>
       <Head>

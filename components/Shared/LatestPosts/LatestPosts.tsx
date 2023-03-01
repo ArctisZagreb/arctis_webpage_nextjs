@@ -7,8 +7,6 @@ export const LatestPosts: React.FC<{
   title: string;
   data: IPost[] | ISuccessStory[];
 }> = ({ title, data }) => {
-  console.log(data[0], "data 0");
-
   return (
     <div className={styles["latest-posts"]}>
       <h2 className={styles["title"]}>{title}</h2>

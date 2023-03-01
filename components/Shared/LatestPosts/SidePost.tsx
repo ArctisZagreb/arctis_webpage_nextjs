@@ -5,8 +5,6 @@ import styles from "./SidePost.module.scss";
 export const SidePost: React.FC<{ data: IPost | ISuccessStory }> = ({
   data,
 }) => {
-  console.log(data);
-
   if (data.externalNews.flag) {
     return (
       <a
