@@ -1,0 +1,16 @@
+@import "./../../styles/variables";
+
+.contact-header {
+  padding-top: 10rem;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    @include h1FontRegular;
+    text-transform: uppercase;
+    letter-spacing: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    @include bodyFontRegular;
+  }
+}

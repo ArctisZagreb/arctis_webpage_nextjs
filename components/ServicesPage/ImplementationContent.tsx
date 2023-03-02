@@ -16,12 +16,12 @@ export const ImplementationContent = () => {
           The implementation projects run by our experts, with a stone-solid
           foundation in implementation standards, following the different
           solutions combined best practice methodology, developed and improved
-          during decade’s worth of projects experience.
+          during decade&apos;s worth of projects experience.
         </p>
         <h1 className={styles["title"]}>IMPLEMENTATION PLAN</h1>
         <p className={styles["paragraph"]}>
           ARCHIBUS implementation can be a standard (Commercial of the shelf –
-          COTS), fully customized one (adapted completely to the client's
+          COTS), fully customized one (adapted completely to the client&apos;s
           needs), or within a balanced ratio of both. Customized implementation
           services usually include several steps, first of them being request
           analysis, in which the current and future organisation
@@ -59,7 +59,7 @@ export const ImplementationContent = () => {
           productivity and outline the holistic approach. We excel at our
           ability to implement the powerful ARCHIBUS integration tools that
           bridge divisional and departmental solutions, ultimately adding value
-          to everyone's work.
+          to everyone&apos;s work.
         </p>
       </Wrapper>
       <div className={styles["parallax-container"]}>
