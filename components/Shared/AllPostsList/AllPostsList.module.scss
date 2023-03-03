@@ -1,0 +1,22 @@
+@import "./../../../styles/variables";
+
+.all-posts {
+  background: $gradiant-darkblue;
+  padding: 2rem 0;
+}
+.search-container {
+  width: 30rem;
+  input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: $primary-font-color;
+    padding: 1rem;
+    border-bottom: 0.1rem solid $color-light-100;
+    width: 100%;
+    @include inputFontValue;
+    &::placeholder {
+      color: $primary-font-color;
+    }
+  }
+}

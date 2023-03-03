@@ -1,0 +1,14 @@
+@import "./../../../styles/variables";
+.post-list {
+  padding: 5rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 7rem;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  .post-list {
+    justify-content: space-around;
+    gap: 3rem;
+  }
+}
