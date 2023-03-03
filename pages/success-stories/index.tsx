@@ -1,31 +1,31 @@
 import { AllPostsList } from "@/components/Shared/AllPostsList/AllPostsList";
 import { PageBigTitle } from "@/components/Shared/PageBigTitle";
-import { getAllPosts } from "@/lib/sanityFetch";
-import { IPost } from "@/types/sanity-types";
+import { getAllPosts, getAllSuccessStories } from "@/lib/sanityFetch";
+import { IPost, ISuccessStory } from "@/types/sanity-types";
 import { GetStaticProps } from "next";
 import React from "react";
 
-const NewsPage: React.FC<{ news: IPost[] }> = ({ news }) => {
+const SuccessStoriesPage: React.FC<{ ss: ISuccessStory[] }> = ({ ss }) => {
   return (
     <div>
       <PageBigTitle
-        img="/assets/images/decorative/bg-header-news.png"
+        img="/assets/images/decorative/bg-header-ss.png"
         title="SUCCESS STORIES"
         quoteAuthor="John D. Rockefeller Jr."
         quote=" The secret of success is to do the common thing uncommonly well "
       />
-      {news && <AllPostsList posts={news} />}
+      {ss && <AllPostsList posts={ss} />}
     </div>
   );
 };
 
-export default NewsPage;
+export default SuccessStoriesPage;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const news = await getAllPosts();
+  const ss = await getAllSuccessStories();
   return {
     props: {
-      news,
+      ss,
     },
     revalidate: 120,
   };
