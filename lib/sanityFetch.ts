@@ -61,3 +61,16 @@ export const getLatestSuccessStories = async (numberOfLatest: number) => {
 
   return data;
 };
+export const getAllSuccessStories = async () => {
+  const postGroq = `
+     \*[_type=='successStories' && (!(_id in path("drafts.**")))]{
+        ...,
+        categories[]->,
+        author->
+     }
+    `;
+
+  const postsData = await client.fetch(postGroq);
+
+  return postsData;
+};
