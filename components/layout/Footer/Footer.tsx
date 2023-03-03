@@ -32,6 +32,7 @@ export const Footer = () => {
               rel="noreferrer"
               target="_blank"
               className={styles["social-icon"]}
+              title="linkedin"
             >
               <SocialIcons platform="linkedin" />
             </a>
@@ -40,6 +41,7 @@ export const Footer = () => {
               rel="noreferrer"
               target="_blank"
               className={styles["social-icon"]}
+              title="facebook"
             >
               <SocialIcons platform="facebook" />
             </a>

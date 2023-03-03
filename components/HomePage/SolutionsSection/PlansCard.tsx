@@ -18,10 +18,10 @@ export const PlansCard: React.FC<{
     <div className={styles["card-wrapper"]}>
       <div className={`${styles["card"]}`}>
         <div className={styles["card__header"]}>
-          <h3 className={styles["header-title"]}>{cardData.name}</h3>
+          <p className={styles["header-title"]}>{cardData.name}</p>
         </div>
         <div className={styles["card__content"]}>
-          <h4 className={styles["main-text"]}>{cardData.cardMainText}</h4>
+          <p className={styles["main-text"]}>{cardData.cardMainText}</p>
           <ul className={styles["list"]}>
             {cardData.cardContentList.map((liItem, i) => {
               return <li key={i}> {liItem}</li>;
