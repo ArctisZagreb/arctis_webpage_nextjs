@@ -21,3 +21,11 @@ export interface IArchibusPlan {
     text: string[];
   }[];
 }
+
+export interface IFAQGroup {
+  mainTopic: string;
+  question: string;
+  answer: string;
+  showed: boolean;
+  id: string;
+}
