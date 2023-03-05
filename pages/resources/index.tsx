@@ -1,7 +1,7 @@
 import React from "react";
 
-const IMPORT_NAMEPage = () => {
-  return <div>IMPORT_NAMEPage</div>;
+const ResourcesPage = () => {
+  return <div>ResourcesPage</div>;
 };
 
-export default IMPORT_NAMEPage;
+export default ResourcesPage;
