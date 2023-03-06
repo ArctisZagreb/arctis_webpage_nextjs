@@ -11,9 +11,9 @@ export const FAQContent = () => {
   return (
     <div className={styles["faq-content"]}>
       <Wrapper>
-        <div className={styles["search-container"]}>
+        {/* <div className={styles["search-container"]}>
           <input type="text" name="search" placeholder="Search by question" />
-        </div>
+        </div> */}
         <div className={styles["questions-container"]}>
           <QuestionGroup
             title="property management"
