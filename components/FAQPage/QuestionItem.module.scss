@@ -1,1 +1,27 @@
 @import "./../../styles/variables";
+.question-item {
+  border-radius: 1rem;
+  padding: 0.5rem 0;
+}
+.question {
+  display: flex;
+  gap: 1rem;
+  @include bodyFontRegular;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.answer {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: $primary-color-300;
+  @include bodyFontSmRegular;
+  transform: scaleY(0);
+  height: 0;
+
+  transform-origin: top;
+  &.show {
+    @include transitionAll;
+    transform: scaleY(1);
+    height: auto;
+  }
+}

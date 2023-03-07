@@ -1,4 +1,26 @@
 @import "./../../styles/variables";
 .question-group {
   color: $color-light-100;
+  padding: 1rem 0;
+
+  h4 {
+    @include h4FontRegular;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+}
+.questions-container {
+  transform: scaleY(0);
+  height: 0;
+  transform-origin: top;
+  background: $primary-color-500;
+  opacity: 0;
+  padding: 1rem;
+  @include transitionAll;
+  &.show {
+    opacity: 1;
+    transform: scaleY(1);
+    height: auto;
+  }
 }
