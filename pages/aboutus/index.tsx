@@ -1,7 +1,16 @@
+import { PageBigTitle } from "@/components/Shared/PageBigTitle";
 import React from "react";
 
-const IMPORT_NAMEPage = () => {
-  return <div>IMPORT_NAMEPage</div>;
+const AboutUsPage = () => {
+  return (
+    <div>
+      <PageBigTitle
+        title="Arctis"
+        quote="comes from the latin word Arctus,us,n. – Big Bear (Ursa Major) constellation, or arctus,adj. – close, narrow, bow"
+        img="/assets/images/decorative/bg-header-faq.png"
+      />
+    </div>
+  );
 };
 
-export default IMPORT_NAMEPage;
+export default AboutUsPage;
