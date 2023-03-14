@@ -41,7 +41,7 @@ export const NAVIGATIONPATHS = [
     show: false,
     subroutes: [
       { name: "Company", route: "/aboutus" },
-      { name: "Tech", route: "/" },
+      { name: "Tech", route: "/aboutus#tech" },
       { name: "References", route: "/references" },
     ],
   },

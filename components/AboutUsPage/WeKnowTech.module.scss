@@ -1,0 +1,46 @@
+@import "./../../styles/variables";
+.anchor {
+  position: absolute;
+  top: -7rem;
+}
+.we-know-tech {
+  padding: 5rem 0;
+  position: relative;
+}
+.title {
+  text-align: center;
+  @include h2FontRegular;
+  color: $primary-font-color;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.subtitle {
+  text-align: center;
+  @include bodyFontRegular;
+  color: $primary-font-color;
+  margin-bottom: 5rem;
+}
+.image-desktop {
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.image-mobile {
+  display: none;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .image-desktop {
+    display: none;
+  }
+  .image-mobile {
+    display: block;
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
