@@ -1,0 +1,36 @@
+@import "./../../styles/variables";
+.about {
+  padding: 5rem 0;
+}
+
+.question-container {
+  margin-bottom: 4rem;
+  color: $primary-font-color;
+  .question {
+    @include h2FontRegular;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  .answer {
+    @include bodyFontRegular;
+  }
+}
+.cta-container {
+  display: flex;
+  gap: 2rem;
+}
+@media screen and (max-width: $breakpoint-mobile) {
+  .question-container {
+    .question {
+      @include h3FontRegular;
+    }
+    .answer {
+      @include bodyFontSmRegular;
+    }
+  }
+  .cta-container {
+    flex-direction: column;
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+}
