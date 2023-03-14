@@ -1,0 +1,11 @@
+@import "./../../styles/variables";
+
+.about-us-contact-form {
+  margin: 5rem auto;
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    @include h2FontRegular;
+    margin-bottom: 3rem;
+  }
+}

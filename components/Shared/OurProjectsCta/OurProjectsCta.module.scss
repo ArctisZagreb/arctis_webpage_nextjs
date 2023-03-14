@@ -1,0 +1,51 @@
+@import "./../../../styles/variables";
+
+.flex-container {
+  display: flex;
+  gap: 3rem;
+  padding: 7rem 0;
+
+  .content {
+    flex: 1;
+    p {
+      color: $primary-font-color;
+      @include bodyFontRegular;
+      margin-bottom: 3rem;
+      line-height: 2.5rem;
+    }
+  }
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      max-width: 47rem;
+      height: auto;
+    }
+  }
+}
+.images-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  .image-box {
+    border-radius: 10rem;
+    background-color: $color-light-100;
+    padding: 2rem;
+    img {
+      height: 10rem;
+      width: auto;
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  .flex-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 4rem 0;
+  }
+}
