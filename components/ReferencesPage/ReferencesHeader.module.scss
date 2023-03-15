@@ -1,0 +1,15 @@
+@import "./../../styles/variables";
+
+.references-header {
+  padding-top: 10rem;
+}
+.logo-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.logo-container {
+  cursor: pointer;
+}
+@media screen and (max-width: $breakpoint-mobile) {
+}

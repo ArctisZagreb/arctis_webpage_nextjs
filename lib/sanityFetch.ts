@@ -74,3 +74,14 @@ export const getAllSuccessStories = async () => {
 
   return postsData;
 };
+
+/* Fetch REFERENCES */
+
+export const getAllReferences = async () => {
+  const referencesGroq = `
+    \*[_type=='references' && (!(_id in path("drafts.**")))]
+  `;
+  const referencesData = await client.fetch(referencesGroq);
+
+  return referencesData;
+};

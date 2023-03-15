@@ -50,3 +50,22 @@ export interface ISuccessStory {
   body: any;
   _type: "successStories";
 }
+
+export interface IReference {
+  _id: string;
+  client: {
+    name: string;
+    url?: string;
+  };
+
+  typeOfWork: string;
+  slug: ISlug;
+  logo: string;
+  servicesProvided?: {
+    serviceName: string;
+    subservices?: string[];
+    _key: string;
+  }[];
+  imageGallery?: { image: string }[];
+  _type: "references";
+}

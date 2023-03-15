@@ -5,6 +5,7 @@ import author from "./author";
 import youtube from "./youtube";
 import contactMessage from "./contactMessage";
 import successStories from "./successStories";
+import references from "./references";
 
 export const schemaTypes = [
   post,
@@ -15,4 +16,5 @@ export const schemaTypes = [
   youtube,
   contactMessage,
   blockContent,
+  references,
 ];
