@@ -6,7 +6,7 @@ const ProjectManagementPage = () => {
   return (
     <div>
       <PageBigTitle
-        img="/assets/images/decorative/bg-header1.jpg"
+        img="/assets/images/decorative/bg-header1.webp"
         title="implementation"
         quote=" The best big idea is only going to be as good as its implementation."
         quoteAuthor="Jay Samit"

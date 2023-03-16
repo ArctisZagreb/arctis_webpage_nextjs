@@ -9,7 +9,7 @@ const NewsPage: React.FC<{ news: IPost[] }> = ({ news }) => {
   return (
     <div>
       <PageBigTitle
-        img="/assets/images/decorative/bg-header-news.png"
+        img="/assets/images/decorative/bg-header-news.webp"
         title="news"
         quoteAuthor="William R. Hearst"
         quote="News is something somebody doesn't want printed; all else is advertising."

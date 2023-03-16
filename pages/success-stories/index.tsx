@@ -9,7 +9,7 @@ const SuccessStoriesPage: React.FC<{ ss: ISuccessStory[] }> = ({ ss }) => {
   return (
     <div>
       <PageBigTitle
-        img="/assets/images/decorative/bg-header-ss.png"
+        img="/assets/images/decorative/bg-header-ss.webp"
         title="SUCCESS STORIES"
         quoteAuthor="John D. Rockefeller Jr."
         quote=" The secret of success is to do the common thing uncommonly well "
