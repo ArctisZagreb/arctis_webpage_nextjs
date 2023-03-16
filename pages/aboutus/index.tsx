@@ -13,7 +13,7 @@ const AboutUsPage = () => {
       <PageBigTitle
         title="Arctis"
         quote="comes from the latin word Arctus,us,n. – Big Bear (Ursa Major) constellation, or arctus,adj. – close, narrow, bow"
-        img="/assets/images/decorative/bg-header-faq.png"
+        img="/assets/images/decorative/bg-header-faq.webp"
       />
       <About />
       <WeKnowTech />

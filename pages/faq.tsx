@@ -9,7 +9,7 @@ const Faq = () => {
         title="FAQ"
         quoteAuthor="Laurell K. Hamilton"
         quote="Questions are great, but only if you know the answers. "
-        img="/assets/images/decorative/bg-header-faq.png"
+        img="/assets/images/decorative/bg-header-faq.webp"
       />
       <FAQContent />
     </div>

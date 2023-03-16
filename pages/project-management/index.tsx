@@ -7,7 +7,7 @@ const ProjectManagementPage = () => {
   return (
     <div>
       <PageBigTitle
-        img="/assets/images/decorative/bg-header.jpg"
+        img="/assets/images/decorative/bg-header.webp"
         title="project management"
         quote=" No one can whistle a symphony. It takes an orchestra to play it. "
         quoteAuthor="Halford E. Luccock"
