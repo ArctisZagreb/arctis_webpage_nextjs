@@ -40,18 +40,21 @@ export const ReferenceInfo: React.FC<{ reference: IReference | null }> = ({
         <div className={styles["services"]}>
           {reference.servicesProvided && (
             <>
-              <h4>Services Provided:</h4>
+              <h3>Services Provided:</h3>
               <ul className={styles["services-list"]}>
                 {reference.servicesProvided.map((service) => {
                   console.log(service);
                   if (service.serviceName) {
                     return (
-                      <li key={service._key}>
-                        {service.serviceName}
+                      <li key={service._key} className={styles["service"]}>
+                        <p>{service.serviceName}</p>
 
                         {service.subservices && (
                           <ul className={styles["subservices-list"]}>
                             {service.subservices.map((subServ, i) => {
+                              if (subServ === "") {
+                                return <></>;
+                              }
                               return <li key={subServ + i}>{subServ}</li>;
                             })}
                           </ul>
