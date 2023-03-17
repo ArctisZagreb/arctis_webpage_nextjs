@@ -85,3 +85,14 @@ export const getAllReferences = async () => {
 
   return referencesData;
 };
+
+/* Archibus Products */
+
+export const getAllArchibusProducts = async () => {
+  const productsGroq = `
+  \*[_type=='archibusProducts' && (!(_id in path("drafts.**")))]
+`;
+  const archibusProductsData = await client.fetch(productsGroq);
+
+  return archibusProductsData;
+};

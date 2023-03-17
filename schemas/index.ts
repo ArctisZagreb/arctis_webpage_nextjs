@@ -6,6 +6,7 @@ import youtube from "./youtube";
 import contactMessage from "./contactMessage";
 import successStories from "./successStories";
 import references from "./references";
+import archibusProducts from "./archibusProducts";
 
 export const schemaTypes = [
   post,
@@ -17,4 +18,5 @@ export const schemaTypes = [
   contactMessage,
   blockContent,
   references,
+  archibusProducts,
 ];
