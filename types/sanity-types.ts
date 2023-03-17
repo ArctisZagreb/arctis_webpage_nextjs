@@ -69,3 +69,23 @@ export interface IReference {
   imageGallery?: { image: string }[];
   _type: "references";
 }
+/* ARCHIBUS PRODUCTS TYPES */
+export interface IArchibusProduct {
+  _id: string;
+  _createdAt: string;
+  mainMenuItem: IABProductMainMenuItem;
+}
+
+export interface IABProductMainMenuItem {
+  _id: string;
+  icon: string;
+  headerImg: string;
+  name: string;
+  subMenuItem: IABProductSubMenuItem;
+}
+
+export interface IABProductSubMenuItem {
+  _key: string;
+  name: string;
+  body: any;
+}
