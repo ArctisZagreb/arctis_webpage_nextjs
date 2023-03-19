@@ -81,7 +81,7 @@ export interface IABProductMainMenuItem {
   icon: string;
   headerImg: string;
   name: string;
-  subMenuItem: IABProductSubMenuItem;
+  subMenuItem: IABProductSubMenuItem[];
 }
 
 export interface IABProductSubMenuItem {

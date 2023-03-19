@@ -1,0 +1,57 @@
+@import "./../../styles/variables";
+.archibus-navigation {
+  min-height: 100vh;
+  display: flex;
+}
+.main-navigation {
+  padding-top: 3rem;
+  width: 24rem;
+  min-height: 100vh;
+  height: 100%;
+  background: $primary-color-500;
+  display: flex;
+  flex-direction: column;
+  color: $primary-font-color;
+  gap: 2rem;
+  z-index: 5;
+  &__item {
+    cursor: pointer;
+    padding: 1rem;
+    @include bodyFontSmRegular;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .item-arrow {
+      svg {
+        height: 3rem;
+        width: 3rem;
+
+        fill: $color-light-100;
+      }
+    }
+    &:hover {
+      background-color: #0f8cfa;
+    }
+  }
+}
+.secondary-navigation {
+  width: 20rem;
+  height: 100%;
+  background: $color-light-100;
+  padding-top: 2rem;
+  h3 {
+    @include h4FontMedium;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+  }
+  ul {
+    li {
+      @include bodyFontSmRegular;
+      padding: 1.5rem 1rem;
+      cursor: pointer;
+      &:hover {
+        background: rgba($primary-color-300, 0.3);
+      }
+    }
+  }
+}
