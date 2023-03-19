@@ -6,31 +6,45 @@ import { IABProductSubMenuItem, IArchibusProduct } from "@/types/sanity-types";
 import { ArchibusNavigation } from "./ArchibusNavigation";
 import { ArchibusPost } from "./ArchibusPost";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
+import { IArchibusProductsPost } from "@/types/general";
 
 export const ArchibusProducts: React.FC<{
   archibusProducts: IArchibusProduct[];
 }> = ({ archibusProducts }) => {
   const [selectedPost, setSelectedPost] =
-    useState<IABProductSubMenuItem | null>(null);
+    useState<IArchibusProductsPost | null>(null);
+  const [openedSidebar, setOpenedSideBar] = useState(false);
+  console.log(selectedPost);
+
   return (
     <GradiantBackground>
-      <Wrapper>
-        <div className={styles["archibus-products"]}>
-          <ArchibusNavigation />
+      <div className={styles["archibus-products"]}>
+        <ArchibusNavigation
+          archibusProducts={archibusProducts}
+          os={setOpenedSideBar}
+          setSelectedPost={setSelectedPost}
+        />
+        <AnimatePresence>
           {selectedPost ? (
-            <ArchibusPost />
+            <ArchibusPost postData={selectedPost} />
           ) : (
-            <div className={styles["archibus-logo"]}>
+            <motion.div
+              key="logo"
+              className={`${styles["archibus-logo"]} ${
+                openedSidebar && styles["opsid"]
+              }`}
+            >
               <Image
                 src="/assets/logo/archibus-logo-thin.png"
                 alt="Archibus Logo"
                 width={420}
                 height={110}
               />
-            </div>
+            </motion.div>
           )}
-        </div>
-      </Wrapper>
+        </AnimatePresence>
+      </div>
     </GradiantBackground>
   );
 };

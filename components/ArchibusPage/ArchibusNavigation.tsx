@@ -1,5 +1,88 @@
-import React from "react";
+import Image from "next/image";
+import { urlFor } from "@/lib/sanity.client";
+import { IABProductMainMenuItem, IArchibusProduct } from "@/types/sanity-types";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
+import styles from "./ArchibusNavigation.module.scss";
+import ArrowRight from "./../../public/assets/icons/arrow-right.svg";
+export const ArchibusNavigation: React.FC<{
+  archibusProducts: IArchibusProduct[];
+  os: Function;
+  setSelectedPost: Function;
+}> = ({ archibusProducts, os, setSelectedPost }) => {
+  const [secondaryNav, setSecondaryNav] =
+    useState<IABProductMainMenuItem | null>(null);
 
-export const ArchibusNavigation = () => {
-  return <div>ArchibusNavigation</div>;
+  const openSecondaryNavHandler = (navItem: IABProductMainMenuItem) => {
+    if (secondaryNav?.name === navItem.name) {
+      setSecondaryNav(null);
+      os(false);
+    } else {
+      os(true);
+      setSecondaryNav(navItem);
+    }
+  };
+
+  return (
+    <div className={styles["archibus-navigation"]}>
+      <nav className={styles["main-navigation"]}>
+        {archibusProducts.map((product) => {
+          return (
+            <div
+              key={product._id}
+              className={styles["main-navigation__item"]}
+              onClick={() => {
+                openSecondaryNavHandler(product.mainMenuItem);
+              }}
+            >
+              <span className={styles["item-icon"]}>
+                <Image
+                  src={urlFor(product.mainMenuItem.icon).url()}
+                  alt="icon"
+                  width={24}
+                  height={24}
+                />
+              </span>
+              <span className={styles["item-title"]}>
+                {product.mainMenuItem.name}
+              </span>
+              <span className={styles["item-arrow"]}>
+                <ArrowRight />
+              </span>
+            </div>
+          );
+        })}
+      </nav>
+      <AnimatePresence>
+        {secondaryNav && (
+          <motion.nav
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+            exit={{ x: "-100%" }}
+            className={styles["secondary-navigation"]}
+          >
+            <h3>{secondaryNav.name}</h3>
+            <ul>
+              {secondaryNav.subMenuItem.map((menuItem) => {
+                return (
+                  <li
+                    onClick={() => {
+                      setSelectedPost({
+                        menuItem,
+                        headerImg: secondaryNav.headerImg,
+                      });
+                    }}
+                    key={menuItem._key}
+                  >
+                    {menuItem.name}
+                  </li>
+                );
+              })}
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+    </div>
+  );
 };

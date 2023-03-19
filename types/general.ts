@@ -1,3 +1,5 @@
+import { IABProductMainMenuItem } from "./sanity-types";
+
 export type TSocialIcons = "facebook" | "linkedin";
 export type TContactIcons = "address" | "phone" | "email";
 type subroute = {
@@ -28,4 +30,9 @@ export interface IFAQGroup {
   answer: string;
   showed: boolean;
   id: string;
+}
+
+export interface IArchibusProductsPost {
+  menuItem: IABProductMainMenuItem;
+  headerImg: string;
 }

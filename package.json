@@ -33,6 +33,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@sanity/eslint-config-studio": "^2.0.1"
+    "@sanity/eslint-config-studio": "^2.0.1",
+    "@svgr/webpack": "^6.5.1"
   }
 }
