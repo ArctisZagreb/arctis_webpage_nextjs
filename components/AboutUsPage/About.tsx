@@ -40,8 +40,8 @@ export const About = () => {
             </p>
           </div>
           <div className={styles["cta-container"]}>
-            <Button text="Our work" />
-            <Button text="Contact us" />
+            <Button href="/references" text="Our work" />
+            <Button href="/contact" text="Contact us" />
           </div>
         </div>
       </Wrapper>

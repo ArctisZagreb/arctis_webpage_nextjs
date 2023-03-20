@@ -10,7 +10,7 @@ export const ArchibusProducts = () => {
         <div className={styles["content"]}>
           <p>Learn more about Archibus products and find perfect one for you</p>
           <div>
-            <Button text="products" />
+            <Button href="/archibus" text="products" />
           </div>
         </div>
         <div className={styles["image-container"]}>

@@ -21,6 +21,7 @@ export const ArchibusPlans = () => {
   };
   return (
     <div className={styles["archibus-plans"]}>
+      <div className={styles["anchor"]} id="archibusplans"></div>
       <h1 className={styles["title"]}>ARCHIBUS PLANS</h1>
       <div className={styles["cards-container"]}>
         {ARCHIBUSPLANS.map((plan) => {

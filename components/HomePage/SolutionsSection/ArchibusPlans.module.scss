@@ -3,9 +3,14 @@
 .archibus-plans {
   margin: $sectionMargins;
   padding-bottom: 1rem;
+  position: relative;
   .title {
     @include sectionTitle;
   }
+}
+.anchor {
+  position: absolute;
+  top: -7rem;
 }
 .cards-container {
   display: flex;

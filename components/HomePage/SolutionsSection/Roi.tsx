@@ -13,7 +13,7 @@ export const Roi = () => {
             return on investment for energy and maintenence
           </p>
           <div className={styles["btn-container"]}>
-            <Button text="calculate" />
+            <Button href="/roi" text="calculate" />
           </div>
         </div>
         <div className={styles["image-container"]}>
