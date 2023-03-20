@@ -28,7 +28,7 @@ export const AboutUsSection = () => {
               applications development, systems integration, training and
               support.
             </p>
-            <Button text="learn more" />
+            <Button href="/aboutus" text="learn more" />
           </div>
           <div className={styles["image-container"]}>
             <Image
@@ -46,7 +46,7 @@ export const AboutUsSection = () => {
               services to recognized and valued companies in Croatia and
               worldwide
             </p>
-            <Button text="read more" />
+            <Button href="/references" text="read more" />
           </div>
           <div className={styles["images-container"]}>
             <div className={styles["image-box"]}>

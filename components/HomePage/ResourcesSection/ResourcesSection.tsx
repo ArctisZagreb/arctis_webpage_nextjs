@@ -37,7 +37,7 @@ export const ResourcesSection: React.FC<{
           </div>
           <div className={styles["contact"]}>
             <p>
-              Or <Link href="/faq">contact us</Link> with specific question.
+              Or <Link href="/contact">contact us</Link> with specific question.
             </p>
           </div>
         </div>

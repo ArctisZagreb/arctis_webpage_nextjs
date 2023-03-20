@@ -15,7 +15,7 @@ export default function OurProjectsCta() {
               services to recognized and valued companies in Croatia and
               worldwide
             </p>
-            <Button text="read more" />
+            <Button href="/references" text="read more" />
           </div>
           <div className={styles["images-container"]}>
             <div className={styles["image-box"]}>

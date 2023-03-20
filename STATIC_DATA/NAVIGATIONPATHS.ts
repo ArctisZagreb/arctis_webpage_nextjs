@@ -21,7 +21,7 @@ export const NAVIGATIONPATHS = [
     show: false,
     subroutes: [
       { name: "ARCHIBUS Products", route: "/archibus" },
-      { name: "ARCHIBUS Plans", route: "/" },
+      { name: "ARCHIBUS Plans", route: "/#archibusplans" },
       { name: "ROI Calculator", route: "/roi" },
     ],
   },

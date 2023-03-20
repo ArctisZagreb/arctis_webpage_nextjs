@@ -33,15 +33,15 @@ export const ServicesSection = () => {
         <div className={styles["services-cards"]}>
           <div className={styles["service-card"]}>
             <h4>Project Management</h4>
-            <Button text="read more" />
+            <Button href="/project-management" text="read more" />
           </div>
           <div className={styles["service-card"]}>
             <h4>Implementation</h4>
-            <Button text="read more" />
+            <Button href="/implementation" text="read more" />
           </div>
           <div className={styles["service-card"]}>
             <h4>Consulting</h4>
-            <Button text="read more" />
+            <Button href="/consulting" text="read more" />
           </div>
         </div>
         <div
