@@ -1,4 +1,4 @@
-import { IABProductMainMenuItem } from "./sanity-types";
+import { IABProductMainMenuItem, IABProductSubMenuItem } from "./sanity-types";
 
 export type TSocialIcons = "facebook" | "linkedin";
 export type TContactIcons = "address" | "phone" | "email";
@@ -33,6 +33,6 @@ export interface IFAQGroup {
 }
 
 export interface IArchibusProductsPost {
-  menuItem: IABProductMainMenuItem;
+  menuItem: IABProductSubMenuItem;
   headerImg: string;
 }

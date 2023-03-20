@@ -15,6 +15,9 @@ export const ArchibusProducts: React.FC<{
   const [selectedPost, setSelectedPost] =
     useState<IArchibusProductsPost | null>(null);
   const [openedSidebar, setOpenedSideBar] = useState(false);
+  const closeSelectedPostHandler = () => {
+    setSelectedPost(null);
+  };
   console.log(selectedPost);
 
   return (
@@ -24,26 +27,32 @@ export const ArchibusProducts: React.FC<{
           archibusProducts={archibusProducts}
           os={setOpenedSideBar}
           setSelectedPost={setSelectedPost}
+          selectedPost={selectedPost}
         />
-        <AnimatePresence>
-          {selectedPost ? (
-            <ArchibusPost postData={selectedPost} />
-          ) : (
-            <motion.div
-              key="logo"
-              className={`${styles["archibus-logo"]} ${
-                openedSidebar && styles["opsid"]
-              }`}
-            >
-              <Image
-                src="/assets/logo/archibus-logo-thin.png"
-                alt="Archibus Logo"
-                width={420}
-                height={110}
+        <div className={styles["content"]}>
+          <AnimatePresence>
+            {selectedPost ? (
+              <ArchibusPost
+                closeSelectedPost={closeSelectedPostHandler}
+                postData={selectedPost}
               />
-            </motion.div>
-          )}
-        </AnimatePresence>
+            ) : (
+              <motion.div
+                key="logo"
+                className={`${styles["archibus-logo"]} ${
+                  openedSidebar && styles["opsid"]
+                }`}
+              >
+                <Image
+                  src="/assets/logo/archibus-logo-thin.png"
+                  alt="Archibus Logo"
+                  width={420}
+                  height={110}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </GradiantBackground>
   );

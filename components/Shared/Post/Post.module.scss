@@ -1,5 +1,11 @@
 .post {
   width: 100%;
   position: relative;
-  text-align: center;
+  padding-bottom: 10rem;
+  .post-head {
+    text-align: center;
+  }
+  .post-body {
+    padding: 2rem 1rem 0 2rem;
+  }
 }

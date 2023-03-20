@@ -1,0 +1,23 @@
+@import "./../../styles/variables";
+
+.archibus-post {
+  position: relative;
+}
+.open-menu {
+  display: none;
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  .open-menu {
+    display: block;
+    font-size: 1.5rem;
+    position: fixed;
+    left: 0;
+    top: 8rem;
+    z-index: 10;
+    background: rgba($primary-color-300, 0.9);
+    color: $primary-font-color;
+    padding: 2rem 0.5rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
