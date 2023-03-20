@@ -9,7 +9,7 @@ export const getAllPosts = async () => {
         ...,
         categories[]->,
         author->
-     }
+     } \| order(_createdAt desc)
     `;
 
   const postsData = await client.fetch(postGroq);
@@ -47,6 +47,22 @@ export const getPostsPaths = async () => {
   return pathsList;
 };
 
+export const getBlogPostsPaths = async () => {
+  const postsData = await getAllPosts();
+  const pathsList = postsData
+    .map((post: IPost) => {
+      if (!post.externalNews.flag) {
+        return { params: { newsid: post.slug.current } };
+      }
+    })
+    .filter((post: any) => {
+      if (post) {
+        return post;
+      }
+    });
+
+  return pathsList;
+};
 /* Success Stories */
 
 export const getLatestSuccessStories = async (numberOfLatest: number) => {

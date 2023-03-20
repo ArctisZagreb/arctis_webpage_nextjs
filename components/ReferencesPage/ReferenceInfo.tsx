@@ -43,7 +43,6 @@ export const ReferenceInfo: React.FC<{ reference: IReference | null }> = ({
               <h3>Services Provided:</h3>
               <ul className={styles["services-list"]}>
                 {reference.servicesProvided.map((service) => {
-                  console.log(service);
                   if (service.serviceName) {
                     return (
                       <li key={service._key} className={styles["service"]}>
