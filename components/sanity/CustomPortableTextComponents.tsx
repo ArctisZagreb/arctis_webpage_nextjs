@@ -16,6 +16,9 @@ export const CustomPortableTextComponents = {
     h3: ({ children }: any) => {
       return <h3 className={styles.h3}>{children}</h3>;
     },
+    h4: ({ children }: any) => {
+      return <h4 className={styles.h4}>{children}</h4>;
+    },
     normal: ({ children }: any) => {
       return <p className={styles.p}>{children}</p>;
     },

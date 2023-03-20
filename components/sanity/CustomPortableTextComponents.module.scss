@@ -3,8 +3,10 @@
 .h2,
 .h3,
 .h4,
-.secondary-color {
-  color: $color-primary-300;
+.secondary-color,
+.p,
+.listBullet {
+  color: $primary-font-color;
 }
 .h1 {
   @include h1FontRegular;
@@ -16,6 +18,10 @@
 }
 .h3 {
   @include h3FontMedium;
+  margin-bottom: 1.4rem;
+}
+.h4 {
+  @include h4FontMedium;
   margin-bottom: 1.4rem;
 }
 .p {
@@ -36,17 +42,17 @@
   p {
     margin: 0.5rem 0;
     @include bodyFontSmRegular;
-    color: $color-primary-300;
+    color: $primary-font-color;
   }
 }
 .title {
-  color: $color-primary-500;
+  color: $primary-font-color;
 }
 .link {
-  color: $color-primary-300;
+  color: $primary-font-color;
   transition: 0.2s all;
   &:hover {
-    color: darken($color-primary-300, $amount: 20);
+    color: darken($primary-font-color, $amount: 20);
   }
 }
 .quote {
@@ -54,7 +60,7 @@
   margin-top: 4rem;
   @include h3FontRegular;
   padding-left: 3rem;
-  border-left: 2px solid $color-primary-300;
+  border-left: 2px solid $primary-font-color;
 }
 .cite {
   display: inline-block;
@@ -62,7 +68,7 @@
   text-align: right;
   padding-right: 3rem;
   @include bodyFontRegular;
-  color: $color-primary-300;
+  color: $primary-font-color;
 }
 .listBullet {
   list-style: disc;
@@ -82,7 +88,7 @@
   p {
     margin: 0.5rem 0;
     @include bodyFontSmRegular;
-    color: $color-primary-300;
+    color: $primary-font-color;
     text-align: center;
   }
 }

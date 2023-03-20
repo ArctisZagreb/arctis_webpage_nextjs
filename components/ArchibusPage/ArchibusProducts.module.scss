@@ -8,6 +8,9 @@
   flex-grow: inherit;
   flex-flow: row wrap;
 }
+.content {
+  flex: 1;
+}
 .archibus-logo {
   display: flex;
   justify-content: center;

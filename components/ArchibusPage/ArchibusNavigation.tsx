@@ -5,11 +5,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import styles from "./ArchibusNavigation.module.scss";
 import ArrowRight from "./../../public/assets/icons/arrow-right.svg";
+import { IArchibusProductsPost } from "@/types/general";
 export const ArchibusNavigation: React.FC<{
   archibusProducts: IArchibusProduct[];
   os: Function;
   setSelectedPost: Function;
-}> = ({ archibusProducts, os, setSelectedPost }) => {
+  selectedPost: IArchibusProductsPost | null;
+}> = ({ archibusProducts, os, setSelectedPost, selectedPost }) => {
   const [secondaryNav, setSecondaryNav] =
     useState<IABProductMainMenuItem | null>(null);
 
@@ -22,9 +24,13 @@ export const ArchibusNavigation: React.FC<{
       setSecondaryNav(navItem);
     }
   };
-
+  console.log(selectedPost);
   return (
-    <div className={styles["archibus-navigation"]}>
+    <div
+      className={`${styles["archibus-navigation"]} ${
+        selectedPost ? styles["hide-navbar"] : ""
+      } `}
+    >
       <nav className={styles["main-navigation"]}>
         {archibusProducts.map((product) => {
           return (

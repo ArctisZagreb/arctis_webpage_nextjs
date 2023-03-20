@@ -1,12 +1,21 @@
 import { IArchibusProductsPost } from "@/types/general";
 import React from "react";
 import { Post } from "../Shared/Post/Post";
-
-export const ArchibusPost: React.FC<{ postData: IArchibusProductsPost }> = ({
-  postData,
-}) => {
+import styles from "./ArchibusPost.module.scss";
+export const ArchibusPost: React.FC<{
+  postData: IArchibusProductsPost;
+  closeSelectedPost: Function;
+}> = ({ postData, closeSelectedPost }) => {
   return (
-    <div style={{ flex: 1 }}>
+    <div>
+      <div
+        onClick={() => {
+          closeSelectedPost();
+        }}
+        className={styles["open-menu"]}
+      >
+        MENU
+      </div>
       <Post postData={postData} />
     </div>
   );
