@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  height: 100%;
   &.opsid {
     transition: 1s all;
     flex-grow: 2;

@@ -18,7 +18,6 @@ export const ArchibusProducts: React.FC<{
   const closeSelectedPostHandler = () => {
     setSelectedPost(null);
   };
-  console.log(selectedPost);
 
   return (
     <GradiantBackground>

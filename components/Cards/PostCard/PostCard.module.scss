@@ -41,12 +41,12 @@ $color-hover: #f5f5f5;
     &::after {
       content: "";
       position: absolute;
-      top: 12px;
-      left: -7px;
+      top: 11px;
+      left: -8px;
 
-      transform: rotate(144.5deg);
-      width: 55px;
-      height: 2px;
+      transform: rotate(142.5deg);
+      width: 49px;
+      height: 4px;
       background: $secondary-color-300;
     }
     img {

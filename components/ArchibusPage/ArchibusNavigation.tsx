@@ -24,7 +24,6 @@ export const ArchibusNavigation: React.FC<{
       setSecondaryNav(navItem);
     }
   };
-  console.log(selectedPost);
   return (
     <div
       className={`${styles["archibus-navigation"]} ${
