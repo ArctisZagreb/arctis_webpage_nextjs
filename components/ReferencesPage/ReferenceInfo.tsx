@@ -8,7 +8,7 @@ export const ReferenceInfo: React.FC<{ reference: IReference | null }> = ({
 }) => {
   if (!reference) return <></>;
   return (
-    <div className={styles["reference-info"]}>
+    <div className={styles["reference-info"]} id="reference">
       <div className={styles["client-info"]}>
         <div className={styles["logo-container"]}>
           <Image
