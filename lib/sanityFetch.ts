@@ -95,7 +95,7 @@ export const getAllSuccessStories = async () => {
 
 export const getAllReferences = async () => {
   const referencesGroq = `
-    \*[_type=='references' && (!(_id in path("drafts.**")))]
+    \*[_type=='references' && (!(_id in path("drafts.**")))] 
   `;
   const referencesData = await client.fetch(referencesGroq);
 
@@ -106,7 +106,7 @@ export const getAllReferences = async () => {
 
 export const getAllArchibusProducts = async () => {
   const productsGroq = `
-  \*[_type=='archibusProducts' && (!(_id in path("drafts.**")))]
+  \*[_type=='archibusProducts' && (!(_id in path("drafts.**")))] \| order(displayOrder desc)
 `;
   const archibusProductsData = await client.fetch(productsGroq);
 

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity.client";
-import { IABProductMainMenuItem, IArchibusProduct } from "@/types/sanity-types";
+import { IABProductMainMenuItem } from "@/types/sanity-types";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import styles from "./ArchibusNavigation.module.scss";
 import ArrowRight from "./../../public/assets/icons/arrow-right.svg";
 import { IArchibusProductsPost } from "@/types/general";
 export const ArchibusNavigation: React.FC<{
-  archibusProducts: IArchibusProduct[];
+  archibusProducts: IABProductMainMenuItem[];
   os: Function;
   setSelectedPost: Function;
   selectedPost: IArchibusProductsPost | null;
@@ -37,20 +37,18 @@ export const ArchibusNavigation: React.FC<{
               key={product._id}
               className={styles["main-navigation__item"]}
               onClick={() => {
-                openSecondaryNavHandler(product.mainMenuItem);
+                openSecondaryNavHandler(product);
               }}
             >
               <span className={styles["item-icon"]}>
                 <Image
-                  src={urlFor(product.mainMenuItem.icon).url()}
+                  src={urlFor(product.icon).url()}
                   alt="icon"
                   width={24}
                   height={24}
                 />
               </span>
-              <span className={styles["item-title"]}>
-                {product.mainMenuItem.name}
-              </span>
+              <span className={styles["item-title"]}>{product.name}</span>
               <span className={styles["item-arrow"]}>
                 <ArrowRight />
               </span>

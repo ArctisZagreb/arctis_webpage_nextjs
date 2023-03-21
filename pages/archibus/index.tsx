@@ -1,11 +1,12 @@
 import { ArchibusProducts } from "@/components/ArchibusPage/ArchibusProducts";
 import { getAllArchibusProducts } from "@/lib/sanityFetch";
-import { IArchibusProduct } from "@/types/sanity-types";
+import { IABProductMainMenuItem } from "@/types/sanity-types";
 import React from "react";
 
-const ArchibusPage: React.FC<{ archibusProducts: IArchibusProduct[] }> = ({
-  archibusProducts,
-}) => {
+const ArchibusPage: React.FC<{
+  archibusProducts: IABProductMainMenuItem[];
+}> = ({ archibusProducts }) => {
+  console.log(archibusProducts);
   if (!ArchibusProducts) {
     return (
       <section style={{ paddingTop: "10rem" }}>
@@ -29,5 +30,6 @@ export const getStaticProps = async () => {
     props: {
       archibusProducts,
     },
+    revalidate: 120,
   };
 };
