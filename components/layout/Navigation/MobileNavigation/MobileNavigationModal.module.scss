@@ -9,7 +9,7 @@
   background-color: $primary-color-500;
   transform: scale(0);
   transition: 1s all;
-  z-index: 100;
+  z-index: 150;
   &.open {
     transform: scale(1);
     height: 100vh;
