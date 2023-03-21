@@ -70,17 +70,13 @@ export interface IReference {
   _type: "references";
 }
 /* ARCHIBUS PRODUCTS TYPES */
-export interface IArchibusProduct {
-  _id: string;
-  _createdAt: string;
-  mainMenuItem: IABProductMainMenuItem;
-}
 
 export interface IABProductMainMenuItem {
   _id: string;
   icon: string;
   headerImg: string;
   name: string;
+  displayOrder: number;
   subMenuItem: IABProductSubMenuItem[];
 }
 

@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import styles from "./ArchibusProducts.module.scss";
 import { GradiantBackground } from "../layout/GradiantBackground/GradiantBackground";
 import { Wrapper } from "../layout/Wrapper/Wrapper";
-import { IABProductSubMenuItem, IArchibusProduct } from "@/types/sanity-types";
+import {
+  IABProductSubMenuItem,
+  IABProductMainMenuItem,
+} from "@/types/sanity-types";
 import { ArchibusNavigation } from "./ArchibusNavigation";
 import { ArchibusPost } from "./ArchibusPost";
 import Image from "next/image";
@@ -10,7 +13,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { IArchibusProductsPost } from "@/types/general";
 
 export const ArchibusProducts: React.FC<{
-  archibusProducts: IArchibusProduct[];
+  archibusProducts: IABProductMainMenuItem[];
 }> = ({ archibusProducts }) => {
   const [selectedPost, setSelectedPost] =
     useState<IArchibusProductsPost | null>(null);
