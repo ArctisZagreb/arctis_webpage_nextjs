@@ -1,7 +1,12 @@
+import { UnderConstruction } from "@/components/layout/UnderConstruction/UnderConstruction";
 import React from "react";
 
-const IMPORT_NAMEPage = () => {
-  return <div>IMPORT_NAMEPage</div>;
+const RoiPage = () => {
+  return (
+    <div>
+      <UnderConstruction />
+    </div>
+  );
 };
 
-export default IMPORT_NAMEPage;
+export default RoiPage;
