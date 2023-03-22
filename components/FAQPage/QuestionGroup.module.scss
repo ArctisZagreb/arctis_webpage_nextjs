@@ -3,24 +3,37 @@
   color: $color-light-100;
   padding: 1rem 0;
 
-  h4 {
-    @include h4FontRegular;
+  .question {
+    h4 {
+      @include h4FontRegular;
+    }
     cursor: pointer;
     text-transform: capitalize;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 }
 .questions-container {
-  transform: scaleY(0);
-  height: 0;
   transform-origin: top;
   background: $primary-color-500;
-  opacity: 0;
+
   padding: 1rem;
-  @include transitionAll;
-  &.show {
-    opacity: 1;
-    transform: scaleY(1);
-    height: auto;
+}
+.arrow {
+  svg {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    fill: $color-light-100;
   }
+  transition: 1s;
+}
+.rotate-down {
+  transform: rotate(-90deg);
+}
+
+.rotate-up {
+  transform: rotate(90deg);
 }
