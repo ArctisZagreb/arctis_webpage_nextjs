@@ -14,7 +14,9 @@ export const NavigationItem: React.FC<{ item: INavItem }> = ({ item }) => {
           {subroutes.map((subItem) => {
             return (
               <li key={subItem.name}>
-                <Link href={subItem.route}>{subItem.name}</Link>
+                <Link href={subItem.route} scroll={false}>
+                  {subItem.name}
+                </Link>
               </li>
             );
           })}

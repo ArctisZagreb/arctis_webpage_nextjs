@@ -7,7 +7,7 @@ export const NAVIGATIONPATHS = [
   },
   {
     name: "services",
-    route: "/#services",
+    route: "#",
     show: false,
     subroutes: [
       { name: "Project Management", route: "/project-management" },
@@ -17,11 +17,10 @@ export const NAVIGATIONPATHS = [
   },
   {
     name: "solutions",
-    route: "/#solutions",
+    route: "#",
     show: false,
     subroutes: [
       { name: "ARCHIBUS Products", route: "/archibus" },
-      { name: "ARCHIBUS Plans", route: "/#archibusplans" },
       { name: "ROI Calculator", route: "/roi" },
     ],
   },
@@ -41,7 +40,6 @@ export const NAVIGATIONPATHS = [
     show: false,
     subroutes: [
       { name: "Company", route: "/aboutus" },
-      { name: "Tech", route: "/aboutus#tech" },
       { name: "References", route: "/references" },
     ],
   },

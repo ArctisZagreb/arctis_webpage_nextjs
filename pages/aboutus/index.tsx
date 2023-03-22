@@ -1,25 +1,34 @@
 import { About } from "@/components/AboutUsPage/About";
 import { WeKnowTech } from "@/components/AboutUsPage/WeKnowTech";
 import { AboutUsContactForm } from "@/components/ContactPage/AboutUsContactForm";
-import { AboutUsSection } from "@/components/HomePage/AboutUsSection/AboutUsSection";
-import { ContactForm } from "@/components/Shared/ContactForm/ContactForm";
+import { PageHead } from "@/components/layout/Head/Head";
 import OurProjectsCta from "@/components/Shared/OurProjectsCta/OurProjectsCta";
 import { PageBigTitle } from "@/components/Shared/PageBigTitle";
+import { AboutUsPageContent } from "@/STATIC_DATA/STATICPAGECONTENT";
 import React from "react";
 
 const AboutUsPage = () => {
+  const { title, description, metaTitle, imageUrl } = AboutUsPageContent.head;
   return (
-    <div>
-      <PageBigTitle
-        title="Arctis"
-        quote="comes from the latin word Arctus,us,n. – Big Bear (Ursa Major) constellation, or arctus,adj. – close, narrow, bow"
-        img="/assets/images/decorative/bg-header-faq.webp"
+    <>
+      <PageHead
+        title={title}
+        description={description}
+        metaTitle={metaTitle}
+        imageUrl={imageUrl}
       />
-      <About />
-      <WeKnowTech />
-      <OurProjectsCta />
-      <AboutUsContactForm />
-    </div>
+      <div>
+        <PageBigTitle
+          title="Arctis"
+          quote="comes from the latin word Arctus,us,n. – Big Bear (Ursa Major) constellation, or arctus,adj. – close, narrow, bow"
+          img="/assets/images/decorative/bg-header-faq.webp"
+        />
+        <About />
+        <WeKnowTech />
+        <OurProjectsCta />
+        <AboutUsContactForm />
+      </div>
+    </>
   );
 };
 
