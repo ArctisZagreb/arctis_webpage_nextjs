@@ -1,8 +1,8 @@
 import React from "react";
+import styles from "./About.module.scss";
 import { GradiantBackground } from "../layout/GradiantBackground/GradiantBackground";
 import { Wrapper } from "../layout/Wrapper/Wrapper";
 import { Button } from "../UI/Button";
-import styles from "./About.module.scss";
 export const About = () => {
   return (
     <GradiantBackground>

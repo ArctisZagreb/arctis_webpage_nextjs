@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
     setInitialLoad(false);
   }, []);
   return (
-    <div>
+    <>
       <div className="absolute-logo">
         <Image
           src="/assets/logo/arctis-logo3.png"
@@ -53,6 +53,6 @@ export default function App({ Component, pageProps }: AppProps) {
           </Layout>
         </motion.div>
       </AnimatePresence>
-    </div>
+    </>
   );
 }

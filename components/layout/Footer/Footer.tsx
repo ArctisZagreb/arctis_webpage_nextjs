@@ -75,13 +75,10 @@ export const Footer = () => {
             <h2 className={styles["section-title"]}>Quick Links</h2>
             <ul className={styles["links-list"]}>
               <li>
-                <Link href="/#services">Services</Link>
+                <Link href="/contact">Contact</Link>
               </li>
               <li>
-                <Link href="/#solutions">Solutions</Link>
-              </li>
-              <li>
-                <Link href="/#resources">Resources</Link>
+                <Link href="/archibus">Archibus</Link>
               </li>
               <li>
                 <Link href="/aboutus">About us</Link>
