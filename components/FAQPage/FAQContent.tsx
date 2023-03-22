@@ -7,14 +7,15 @@ import {
   MAINTENANCE_MANAGEMENT_FAQ,
 } from "@/STATIC_DATA/FAQ";
 import { QuestionGroup } from "./QuestionGroup";
+import { motion } from "framer-motion";
 export const FAQContent = () => {
   return (
-    <div className={styles["faq-content"]}>
+    <motion.div className={styles["faq-content"]}>
       <Wrapper>
         {/* <div className={styles["search-container"]}>
           <input type="text" name="search" placeholder="Search by question" />
         </div> */}
-        <div className={styles["questions-container"]}>
+        <motion.div layout className={styles["questions-container"]}>
           <QuestionGroup
             title="property management"
             items={PROPERTY_MANAGMENT_FAQ}
@@ -27,8 +28,8 @@ export const FAQContent = () => {
             title="maintenance management"
             items={MAINTENANCE_MANAGEMENT_FAQ}
           />
-        </div>
+        </motion.div>
       </Wrapper>
-    </div>
+    </motion.div>
   );
 };
