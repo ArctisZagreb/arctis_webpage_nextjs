@@ -1,3 +1,4 @@
+import { PageHead } from "@/components/layout/Head/Head";
 import { PageBigTitle } from "@/components/Shared/PageBigTitle";
 import { Post } from "@/components/Shared/Post/Post";
 import { urlFor } from "@/lib/sanity.client";
@@ -8,11 +9,21 @@ import React from "react";
 
 const NewsPostPage: React.FC<{ post: IPost }> = ({ post }) => {
   const postImage = post.image ? urlFor(post.image).url() : post.externalImg;
+  const title = post.title;
+  const description = post.description;
   return (
-    <div>
-      <PageBigTitle title={post.title} img={postImage} />
-      <Post post={post} />
-    </div>
+    <>
+      <PageHead
+        title={title}
+        description={description}
+        metaTitle={title}
+        imageUrl={postImage}
+      />
+      <div>
+        <PageBigTitle title={title} img={postImage} />
+        <Post post={post} />
+      </div>
+    </>
   );
 };
 

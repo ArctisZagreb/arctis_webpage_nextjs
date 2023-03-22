@@ -1,21 +1,33 @@
+import { PageHead } from "@/components/layout/Head/Head";
 import { AllPostsList } from "@/components/Shared/AllPostsList/AllPostsList";
 import { PageBigTitle } from "@/components/Shared/PageBigTitle";
-import { getAllPosts, getAllSuccessStories } from "@/lib/sanityFetch";
-import { IPost, ISuccessStory } from "@/types/sanity-types";
+import { getAllSuccessStories } from "@/lib/sanityFetch";
+import { SSPageContent } from "@/STATIC_DATA/STATICPAGECONTENT";
+import { ISuccessStory } from "@/types/sanity-types";
 import { GetStaticProps } from "next";
 import React from "react";
 
 const SuccessStoriesPage: React.FC<{ ss: ISuccessStory[] }> = ({ ss }) => {
+  const { title, description, metaTitle, imageUrl } = SSPageContent.head;
+
   return (
-    <div>
-      <PageBigTitle
-        img="/assets/images/decorative/bg-header-ss.webp"
-        title="SUCCESS STORIES"
-        quoteAuthor="John D. Rockefeller Jr."
-        quote=" The secret of success is to do the common thing uncommonly well "
+    <>
+      <PageHead
+        title={title}
+        description={description}
+        metaTitle={metaTitle}
+        imageUrl={imageUrl}
       />
-      {ss && <AllPostsList posts={ss} />}
-    </div>
+      <div>
+        <PageBigTitle
+          img="/assets/images/decorative/bg-header-ss.webp"
+          title="SUCCESS STORIES"
+          quoteAuthor="John D. Rockefeller Jr."
+          quote=" The secret of success is to do the common thing uncommonly well "
+        />
+        {ss && <AllPostsList posts={ss} />}
+      </div>
+    </>
   );
 };
 

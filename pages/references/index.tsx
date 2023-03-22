@@ -4,10 +4,15 @@ import { getAllReferences } from "@/lib/sanityFetch";
 import { IReference } from "@/types/sanity-types";
 import React, { useState } from "react";
 import { Wrapper } from "@/components/layout/Wrapper/Wrapper";
+import { ReferencesPageContent } from "@/STATIC_DATA/STATICPAGECONTENT";
+import { PageHead } from "@/components/layout/Head/Head";
 
 const ReferencesPage: React.FC<{ references: IReference[] }> = ({
   references,
 }) => {
+  const { title, description, metaTitle, imageUrl } =
+    ReferencesPageContent.head;
+
   const [chosenReference, setChosenReference] = useState<IReference | null>(
     references[0]
   );
@@ -20,15 +25,23 @@ const ReferencesPage: React.FC<{ references: IReference[] }> = ({
     if (reference) setChosenReference(reference);
   };
   return (
-    <section>
-      <Wrapper>
-        <ReferencesHeader
-          references={references}
-          selectReference={pickReferenceHandler}
-        />
-        <ReferenceInfo reference={chosenReference} />
-      </Wrapper>
-    </section>
+    <>
+      <PageHead
+        title={title}
+        description={description}
+        metaTitle={metaTitle}
+        imageUrl={imageUrl}
+      />
+      <section>
+        <Wrapper>
+          <ReferencesHeader
+            references={references}
+            selectReference={pickReferenceHandler}
+          />
+          <ReferenceInfo reference={chosenReference} />
+        </Wrapper>
+      </section>
+    </>
   );
 };
 
