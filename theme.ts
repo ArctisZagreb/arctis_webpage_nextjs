@@ -1,28 +1,42 @@
 import { buildLegacyTheme } from "sanity";
 
 const props = {
-  "color-light": "#fff",
-  "color-dark": "#1a1a1a",
-  "color-primary-300": "#f86e51",
-  "color-primary-500": "#ee3e3b",
-  "color-secondary-500": "#4b2d67",
-  "color-warning": "#ff3650",
-  "color-caution": "#ffcc00",
-  "color-success": "#00cb90",
+  "--my-white": "#fff",
+  "--my-black": "#1a1a1a",
+  "--my-blue": "#4285f4",
+  "--my-red": "#db4437",
+  "--my-yellow": "#f4b400",
+  "--my-green": "#0f9d58",
 };
 
 export const myTheme = buildLegacyTheme({
   /* Base theme colors */
-  "--black": props["color-dark"],
-  "--white": props["color-light"],
-
-  "--gray": "#666",
+  "--black": "#000",
+  "--white": "#fff",
+  "--gray": "#ccc",
   "--gray-base": "#666",
+  "--component-bg": "#fff",
+  "--component-text-color": "#000",
 
-  "--component-bg": props["color-dark"],
-  "--component-text-color": props["color-light"],
+  /* Brand */
+  "--brand-primary": "#073772",
 
-  /* BRAND */
+  // Default button
+  "--default-button-color": "#666",
+  "--default-button-primary-color": "#073772",
+  "--default-button-success-color": "#0f9d58",
+  "--default-button-warning-color": "#f4b400",
+  "--default-button-danger-color": "#db4437",
 
-  "--brand-primary": props["color-primary-300"],
+  /* State */
+  "--state-info-color": "#4285f4",
+  "--state-success-color": "#0f9d58",
+  "--state-warning-color": "#f4b400",
+  "--state-danger-color": "#db4437",
+
+  /* Navbar */
+  "--main-navigation-color": "#073772",
+  "--main-navigation-color--inverted": "#fff",
+
+  "--focus-color": "#4285f4",
 });
