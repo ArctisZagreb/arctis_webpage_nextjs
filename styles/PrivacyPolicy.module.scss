@@ -1,0 +1,19 @@
+@import "./variables";
+
+.privacy-policy {
+  color: $primary-font-color;
+  h1 {
+    @include h1FontRegular;
+    margin: 2rem 0;
+  }
+
+  h2 {
+    margin: 2rem 0;
+    @include h2FontRegular;
+  }
+  p {
+    @include bodyFontRegular;
+  }
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
