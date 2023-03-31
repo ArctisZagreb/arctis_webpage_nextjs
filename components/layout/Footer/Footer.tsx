@@ -86,6 +86,9 @@ export const Footer = () => {
               <li>
                 <Link href="/faq">FAQ</Link>
               </li>
+              <li>
+                <Link href="/privacy-policy">Privacy Policy</Link>
+              </li>
             </ul>
           </div>
         </div>

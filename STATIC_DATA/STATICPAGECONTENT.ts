@@ -8,6 +8,15 @@ export const HomePageContent = {
     imageUrl: imageUrlForPreview,
   },
 };
+export const PPPageContent = {
+  head: {
+    title: "Arctis - Privacy Policy",
+    metaTitle: "Arctis - Privacy Policy",
+    description:
+      "Privacy Policy of Arctis d.o.o. .Zastupnik Archibus-a za Hrvatsku i regiju.",
+    imageUrl: imageUrlForPreview,
+  },
+};
 export const ROIPageContent = {
   head: {
     title: "Arctis - Return of Investment",
