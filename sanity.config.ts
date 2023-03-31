@@ -10,7 +10,6 @@ export default defineConfig({
   basePath: "/studio",
   name: "Arctis",
   title: "arctis-studio",
-
   projectId: projectId,
   dataset: dataset,
 
