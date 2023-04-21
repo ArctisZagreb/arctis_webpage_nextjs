@@ -5,11 +5,28 @@
 }
 .logo-list {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 .logo-container {
   cursor: pointer;
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 15rem;
+  padding: 1rem;
+  background-color: aliceblue;
+  box-shadow: 0 0 5px rgba($primary-color-300, $alpha: 0.2);
+  filter: grayscale(1);
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+  &:hover {
+    transform: scale(1.05);
+    filter: none;
+  }
+}
+.active {
+  filter: grayscale(0);
 }
 @media screen and (max-width: $breakpoint-mobile) {
 }

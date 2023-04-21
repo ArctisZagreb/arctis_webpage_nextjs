@@ -35,6 +35,7 @@ const ReferencesPage: React.FC<{ references: IReference[] }> = ({
       <section>
         <Wrapper>
           <ReferencesHeader
+            chosenReference={chosenReference}
             references={references}
             selectReference={pickReferenceHandler}
           />

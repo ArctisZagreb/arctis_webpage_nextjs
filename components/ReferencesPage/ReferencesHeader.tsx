@@ -9,7 +9,8 @@ import { useWindowSize } from "@/lib/hooks";
 export const ReferencesHeader: React.FC<{
   references: IReference[];
   selectReference: Function;
-}> = ({ references, selectReference }) => {
+  chosenReference: IReference | null;
+}> = ({ references, selectReference, chosenReference }) => {
   const router = useRouter();
   const windowSize = useWindowSize();
   console.log(windowSize);
@@ -20,7 +21,11 @@ export const ReferencesHeader: React.FC<{
           return (
             <div
               key={reference._id}
-              className={styles["logo-container"]}
+              className={`${styles["logo-container"]} ${
+                chosenReference &&
+                reference._id === chosenReference._id &&
+                styles["active"]
+              }`}
               onClick={() => {
                 selectReference(reference.client.name);
                 if (
