@@ -7,6 +7,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const router = useRouter();
+  console.log("test");
   if (router.asPath.includes("/studio")) {
     return <div className={styles["studio-layout"]}>{children}</div>;
   }
